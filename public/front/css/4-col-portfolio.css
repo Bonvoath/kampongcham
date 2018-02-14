@@ -1,0 +1,96 @@
+/*!
+ * Start Bootstrap - 4 Col Portfolio (https://startbootstrap.com/template-overviews/4-col-portfolio)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-4-col-portfolio/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+.hr-c {
+	border: 1px solid #f90e19;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+p {
+	font-size: 13px;
+}
+.background {
+	background: #f3f3f3;
+}
+.card {
+	border-radius: 0;
+	border:none;
+}
+.card-body {
+		padding: 10px;
+}
+.news {
+	background: #f90e19;
+	padding: 5px;
+}
+.date {
+	border-left: 5px #fa4775 solid;
+	padding-left: 10px;
+	background: #FCE4EC;
+	font-size: 11px;
+	color: #f90e19;
+}
+.c-news {
+	margin-top: 15px;
+	margin-bottom: -14px;
+	font-size: 13px;
+	color: #fff;
+}
+.ad {
+	margin-top: 5px;
+	padding: 5px;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	background: #f90e19;
+	font-size: 13px;
+}
+.ad2 {
+	margin-top: 10px;
+	padding: 5px;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	background: #f90e19;
+	font-size: 13px;
+}
+.pd {
+	padding: 5px;
+	border: 1px solid red;
+	background: #fff;
+	box-shadow: 0 10px 6px -6px red;
+}
+.pd2 {
+	padding: 10px;
+	background: #fff;
+	font-size: 13px;
+}
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.pagination {
+  margin-bottom: 30px;
+}
+.navbar {
+    padding: 0px;
+}
+.bg-dark {
+    background-color: #f90e19 !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 13px;
+}
+.carousel {
+	padding: 5px;
+}
