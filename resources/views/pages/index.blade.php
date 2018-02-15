@@ -16,7 +16,9 @@
                             <tr>
                                 <th>&numero;</th>
                                 <th>Title</th>
-                                <th>Action</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,7 +30,7 @@
                                     <td>
                                         <a href="{{url('/page/view/'.$pag->id)}}" title="view"><i class="fa fa-eye text-info"></i></a>&nbsp;&nbsp;
                                         <a href="{{url('/page/edit/'.$pag->id)}}" title="Edit"><i class="fa fa-edit text-success"></i></a>&nbsp;&nbsp;
-                                       <a href="{{url('/page/delete/'.$pag->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete"><i class="fa fa-remove text-danger"></i></a>
+                                        <a href="{{url('/page/delete/'.$pag->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete"><i class="fa fa-remove text-danger"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -5,17 +5,19 @@ namespace App\Http\Controllers;
 use App\Posts;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
+use Session;
+use Auth;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $data['pages'] = DB::table('pages')
+            ->where('active', 1)
+            ->paginate(18);
+
+        return view('posts.index', $data);
     }
 
     /**
@@ -25,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
