@@ -14,7 +14,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div> -->
-                    <h4 class="mb-0">{{$dd_count['category']}}</h4>
+
                     <p>Categories</p>
                 </div>
                 <div class="chart-wrapper px-3" style="height:70px;">
@@ -30,7 +30,7 @@
                    <!--  <button type="button" class="btn btn-transparent active p-0 float-right">
                         <i class="icon-location-pin"></i>
                     </button> -->
-                    <h4 class="mb-0">{{$dd_count['shop']}}</h4>
+    
                     <p>Shops</p>
                 </div>
                 <div class="chart-wrapper px-3" style="height:70px;">
@@ -53,7 +53,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div> -->
-                    <h4 class="mb-0">{{$dd_count['product']}}</h4>
+
                     <p>products</p>
                 </div>
                 <div class="chart-wrapper" style="height:70px;">
@@ -76,7 +76,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div> -->
-                    <h4 class="mb-0">{{$dd_count['package']}}</h4>
+\
                     <p>Packages</p>
                 </div>
                 <div class="chart-wrapper px-3" style="height:70px;">
@@ -99,7 +99,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div> -->
-                    <h4 class="mb-0">{{$dd_count['subscription']}}</h4>
+
                     <p>Subscriptions</p>
                 </div>
                 <div class="chart-wrapper" style="height:70px;">

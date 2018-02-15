@@ -31,7 +31,6 @@
                                 <td>{{$user->language=='kh'?'ខ្មែរ':'English'}}</td>
                                 <td>{{$user->role_name}}</td>
                                 <td>
-                                    <a href="{{url('/user/branch/'.$user->id)}}" title="{{$lb_set_branch}}"><i class="fa fa-list text-success"></i></a>&nbsp;&nbsp
                                     <a href="{{url('/user/update-password/'.$user->id)}}" title="{{$lb_reset_password}}"><i class="fa fa-shield"></i></a>&nbsp;&nbsp
                                     <a href="{{url('/user/edit/'.$user->id)}}" title="{{$lb_edit}}"><i class="fa fa-edit text-success"></i></a>&nbsp;&nbsp
                                     <a href="{{url('/user/delete/'.$user->id)}}" onclick="return confirm('{{$lb_confirm_delete}}')" title="{{$lb_delete}}"><i class="fa fa-remove text-danger"></i></a>
