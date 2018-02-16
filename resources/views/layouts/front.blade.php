@@ -12,8 +12,7 @@
     <link href="{{asset('front/css/4-col-portfolio.css')}}" rel="stylesheet">
   </head>
   <body>
-  <?php $logo = DB::table('logos')->first(); ?>
-    <center><div style="margin-top: -57px; magin-button: 5px; background: #cb0003;" ><a class="text-danger" href="#"><img src="{{asset('img/'.$logo->photo)}}" width="100%"></a></div></center> 
+    <center><div style="margin-top: -57px; magin-button: 5px; background: #cb0003;" ><a class="text-danger" href="{{url('/')}}"><img src="{{asset('front/img/Untitled-28.png')}}" width="100%"></a></div></center> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
