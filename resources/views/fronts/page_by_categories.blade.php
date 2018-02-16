@@ -1,6 +1,10 @@
 @extends('layouts.detail')
 @section('content')
 <br>
+<div class="c-news">
+    <span class="news">{{$category->name}}</span> <a href="#" style="text-decoration: none;"><span class="text-danger"></span></a>
+</div>
+<hr class="hr-c">
 <div class="page-by-cat">
     @foreach($posts as $p)
     <div class="row">

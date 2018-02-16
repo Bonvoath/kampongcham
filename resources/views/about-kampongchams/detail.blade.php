@@ -4,7 +4,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> Detail Post&nbsp;&nbsp;
+                    <i class="fa fa-align-justify"></i> Detail About Kampongcham&nbsp;&nbsp;
                     <a href="{{url('/about-kampongcham')}}" class="btn btn-link btn-sm">Back To List</a>
                 </div>
                 <div class="card-block">

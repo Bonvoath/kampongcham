@@ -30,6 +30,10 @@ class FrontController extends Controller
             ->where('category_id', $id)
             ->where('active',1)
             ->paginate(10);
+        $data['category'] = DB::table('categories')
+            ->where('id',$id)
+            ->where('active',1)
+            ->first();
         return view('fronts.page_by_categories', $data);
     }
 }

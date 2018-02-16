@@ -16,9 +16,7 @@
                             <tr>
                                 <th>&numero;</th>
                                 <th>Title</th>
-                                <th>Author</th>
-                                <th>Category</th>
-                                <th>Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
