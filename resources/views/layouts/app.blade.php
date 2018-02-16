@@ -110,7 +110,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{url('/logo')}}">
-                                    <i class="fa fa-bullseye"></i>Logo
+                                    <i class="fa fa-bullseye"></i>Banner
                                 </a>
                             </li>
                         </ul>

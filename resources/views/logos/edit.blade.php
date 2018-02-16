@@ -4,7 +4,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> Edit Logo&nbsp;&nbsp;
+                    <i class="fa fa-align-justify"></i> Edit Banner&nbsp;&nbsp;
                     <a href="{{url('/logo')}}" class="btn btn-link btn-sm">Back To List</a>
                 </div>
                 <div class="card-block">

@@ -4,7 +4,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> Logo List&nbsp;&nbsp;
+                    <i class="fa fa-align-justify"></i> Banner List&nbsp;&nbsp;
                     @if (count($logo) == 0)
                         <a href="{{url('/logo/create')}}" class="btn btn-link btn-sm">
                              New
