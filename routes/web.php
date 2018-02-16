@@ -149,3 +149,11 @@ Route::post('/admin/product/photo/upload', "ProductController@upload_photo");
 // featured product admin
 Route::get('/admin/feature/product', "FeaturedProductController@index");
 Route::get('/admin/feature/product/delete/{id}', "FeaturedProductController@delete");
+
+// Post
+Route::get('/post', 'PostController@index');
+Route::get('/post/create', 'PostController@create');
+Route::post('/post/save', 'PostController@save');
+Route::get('/post/edit/{id}', 'PostController@edit');
+Route::post('/post/update', 'PostController@update');
+Route::post('/post/delete', 'PostController@delete');

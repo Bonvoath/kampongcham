@@ -8677,7 +8677,9 @@ app-root {
   margin-right: 250px; }
 
 .aside-menu-fixed.aside-menu-hidden .main, .aside-menu-fixed.aside-menu-hidden .app-footer {
-  margin-right: 0; }
+  margin-right: 0; 
+  margin-top: 30px;
+}
 
 .aside-menu-off-canvas .aside-menu {
   position: fixed;

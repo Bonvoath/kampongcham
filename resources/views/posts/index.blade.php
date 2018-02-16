@@ -31,8 +31,7 @@
                                         <a class="btn btn-xs btn-info" href="{{url('/post/view/'.$p->id)}}" title="Detail">Detail</a>
                                         <a class="btn btn-xs btn-primary" href="{{url('/post/edit/'.$p->id)}}" title="Edit">Edit</a>
                                        <a class="btn btn-xs btn-danger"href="{{url('/post/delete/'.$p->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete">Delete</a>
-                                    </td>
-                                </tr>
+                          
                             @endforeach
                         </tbody>
                     </table><br>

@@ -16,7 +16,9 @@
                             <tr>
                                 <th>&numero;</th>
                                 <th>Title</th>
-                                <th>Action</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,6 +31,7 @@
                                         <a class="btn btn-xs btn-info" href="{{url('/page/view/'.$pag->id)}}" title="view">Detail</a>
                                         <a class="btn btn-xs btn-primary"  href="{{url('/page/edit/'.$pag->id)}}" title="Edit">Edit</a>
                                        <a class="btn btn-xs btn-danger"  href="{{url('/page/delete/'.$pag->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete">Delete</a>
+                                    
                                     </td>
                                 </tr>
                             @endforeach
