@@ -15,8 +15,8 @@
                         <thead>
                             <tr>
                                 <th>&numero;</th>
-                                <th>Name</th>
                                 <th>Image</th>
+                                <th>Name</th>
                                 <th>Order</th>
                                 <th>Action</th>
                             </tr>
@@ -26,12 +26,12 @@
                             @foreach($slides as $sli)
                                 <tr>
                                     <td>{{$i++}}</td>
+                                    <td><img src="{{URL::asset('/img/').'/'.$sli->photo}}" width="100"/></td>
                                     <td>{{$sli->name}}</td>
-                                    <td><img src="{{URL::asset('/img/').'/'.$sli->photo}}" width="65"/></td>
                                     <td>{{$sli->order}}</td>
                                     <td>
-                                        <a href="{{url('/slide/edit/'.$sli->id)}}" title="Edit"><i class="fa fa-edit text-success"></i></a>&nbsp;&nbsp;
-                                        <a href="{{url('/slide/delete/'.$sli->id)}}" title="Edit"><i class="fa fa-remove text-danger"></i></a>
+                                        <a class="btn btn-xs btn-primary"  href="{{url('/slide/edit/'.$sli->id)}}" title="Edit">Edit</a>
+                                        <a class="btn btn-xs btn-danger"  href="{{url('/slide/delete/'.$sli->id)}}" title="Delete">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

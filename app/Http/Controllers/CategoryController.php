@@ -14,7 +14,6 @@ class CategoryController extends Controller
     // index
     public function index()
     {
-
         $data['categories'] = DB::table('categories as a')
             ->leftjoin('categories as b','b.id','=','a.parent_id')
             ->select('a.*', 'b.name as parent_name')
@@ -25,7 +24,6 @@ class CategoryController extends Controller
     // load create form
     public function create()
     {
-
         $data['categories'] = DB::table('categories as a')
             ->join('categories as b', 'b.id', '=', 'a.id')
             ->where('b.active', 1)->where('b.parent_id', 0)->get();

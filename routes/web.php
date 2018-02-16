@@ -39,7 +39,9 @@ Route::get('/video-training/edit/{id}', "VideoTrainingController@edit");
 Route::post('/video-training/update', "VideoTrainingController@update");
 Route::get('/home', 'HomeController@index')->name('home');
 // detail page
-Route::get('/product/detail/{id}', 'FrontController@detail');
+Route::get('/detail/{id}', 'FrontController@detail');
+Route::get('/about-kampongcham/detail/{id}', 'FrontController@about_kampongcham_detail');
+Route::get('/page-by-category/{id}', 'FrontController@page_by_category');
 // user route
 Route::get('/user', "UserController@index");
 Route::get('/user/profile', "UserController@load_profile");
@@ -112,11 +114,26 @@ Route::get('/page/delete/{id}', "PageController@delete");
 Route::get('/page/edit/{id}', "PageController@edit");
 Route::post('/page/update', "PageController@update");
 Route::get('/page/view/{id}', "PageController@view");
-
+// Page
+Route::get('/about-kampongcham', "AboutKampongchamController@index");
+Route::get('/about-kampongcham/create', "AboutKampongchamController@create");
+Route::post('/about-kampongcham/save', "AboutKampongchamController@save");
+Route::get('/about-kampongcham/delete/{id}', "AboutKampongchamController@delete");
+Route::get('/about-kampongcham/edit/{id}', "AboutKampongchamController@edit");
+Route::post('/about-kampongcham/update', "AboutKampongchamController@update");
+Route::get('/about-kampongcham/view/{id}', "AboutKampongchamController@view");
+// Post
+Route::get('/post', "PostController@index");
+Route::get('/post/create', "PostController@create");
+Route::post('/post/save', "PostController@save");
+Route::get('/post/delete/{id}', "PostController@delete");
+Route::get('/post/edit/{id}', "PostController@edit");
+Route::post('/post/update', "PostController@update");
+Route::get('/post/view/{id}', "PostController@view");
 // front page
 Route::get('/page/about', "FrontPageController@about");
-Route::get('/page/free-video-magic', "FrontPageController@video");
 Route::get('/page/contact', "FrontPageController@contact");
+Route::get('/page/message-from-the-governor', "FrontPageController@message");
 // test
 Route::get('/test', "TestController@index");
 // product admin

@@ -66,6 +66,7 @@
                             <label class="control-label col-lg-1 col-sm-2">&nbsp;</label>
                             <div class="col-lg-6 col-sm-8">
                                 <button class="btn btn-primary" type="submit">Save Change</button>
+                                <button class="btn btn-danger" type="reset">Cancel</button>
                             </div>
                         </div>
                     </form>

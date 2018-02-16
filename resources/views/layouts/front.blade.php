@@ -12,41 +12,46 @@
     <link href="{{asset('front/css/4-col-portfolio.css')}}" rel="stylesheet">
   </head>
   <body>
-
-    <center><h1 style="margin-top: -45px; padding: 20px;" ><a class="text-danger" href="#">រដ្ឋបាល ខេត្តកំពង់ចាម</a></h1></center> 
+  <?php $logo = DB::table('logos')->first(); ?>
+    <center><div style="margin-top: -57px; magin-button: 5px; background: #cb0003;" ><a class="text-danger" href="#"><img src="{{asset('img/'.$logo->photo)}}" width="100%"></a></div></center> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+          <?php  $categories = DB::table('categories as a')
+            ->leftjoin('categories as b','b.id','=','a.parent_id')
+            ->select('a.*', 'b.name as parent_name')
+            ->where('a.active',1)
+            ->where('a.parent_id', 0)
+            ->paginate(18);
+          ?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">ទំព័រដើម
+              <a class="nav-link" href="{{url('/')}}">ទំព័រដើម
               </a>
             </li>
+            @foreach($categories as $cat)
+            <?php
+                $subs = DB::table('categories')->where('active',1)->where('parent_id', $cat->id)->get();
+            ?>
             <li class="nav-item">
-              <a class="nav-link" href="#">ព័ត៌មាន</a>
+              <a class="nav-link" href="{{url('page-by-category/'.$cat->id)}}"> @if(count($subs)<=0){{$cat->name}} @endif</a>
+              @if(count($subs)>0)
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                   {{$cat->name}} 
+                  </a>
+                <div class="dropdown-menu">
+                  @foreach($subs as $s)
+                  <a class="dropdown-item" href="#">{{$s->name}} </a>
+                  @endforeach
+                </div>
+              </li>
+              @endif
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ទំនាក់ទំនងកិច្ចការរដ្ឋបាល​ </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">គម្រោង-ដៃគូអភិវឌ្ឌន៍ </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">រចនាសម្ព័ន្ធគ្រប់គ្រង </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">កម្រងឯកសារ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">វិស័យទេសចរណ៍</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">គំនិតច្នៃប្រឌិត</a>
-            </li>
-            
+            @endforeach
             
           </ul>
           <ul class="navbar-nav ml-auto" style="background: #fff;">
@@ -90,7 +95,7 @@
             <div class="col-md-3">
               <div class="ad">សារលិខិតរបស់អភិបាល</div>
               <div class="pd">
-                <img src="{{asset('front/img/3.jpg')}}" width="100%">
+                <a href="{{url('page/message-from-the-governor')}}"><img src="{{asset('front/img/minister.jpg')}}" width="100%"></a>
               </div>
             </div>
         </div>
@@ -109,7 +114,13 @@
    <!-- Bootstrap core JavaScript -->
    <script src="{{asset('front/vendor/jquery/jquery.min.js')}}"></script>
    <script src="{{asset('front/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
+<script>
+  $('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+</script>
  </body>
 
 </html>

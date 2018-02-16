@@ -22,11 +22,11 @@ class FrontPageController extends Controller
             ->first();
         return view('fronts.pages.contact', $data);
     }
-    public function video()
+    public function message()
     {
-        $data['videos'] = DB::table('video_trainings')
-            ->where('active', 1)
-            ->paginate(8);
-        return view('fronts.pages.video', $data);
+        $data['message'] = DB::table('pages')
+            ->where('id', 3)
+            ->first();
+        return view('fronts.pages.message', $data);
     }
 }

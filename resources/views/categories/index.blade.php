@@ -25,8 +25,8 @@
                                 <td>{{$cat->name}}</td>
                                 <td>{{$cat->parent_name}}</td>
                                 <td>
-                                    <a href="{{url('/category/edit/'.$cat->id)}}" title="Edit"><i class="fa fa-edit text-success"></i></a>&nbsp;&nbsp;
-                                    <a href="{{url('/category/delete/'.$cat->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete"><i class="fa fa-remove text-danger"></i></a>
+                                    <a class="btn btn-primary btn-xs" href="{{url('/category/edit/'.$cat->id)}}" title="Edit"> Edit</a>
+                                    <a class="btn btn-danger btn-xs" href="{{url('/category/delete/'.$cat->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

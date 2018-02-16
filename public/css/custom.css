@@ -23,6 +23,10 @@
     border-right: 1px solid #CCCCCC;
     font-size: 13px;
 }
+.btn-xs {
+    padding: 2px 5px;
+    margin: 2px;
+}
 .tbl tbody tr:nth-child(even)
 {
     background: #f4f5f6;

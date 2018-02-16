@@ -1,168 +1,43 @@
 @extends('layouts.front')
 @section('content')
-
      <div class="row">
-     <div class="col-md-9">
-       <div class="c-news"><span class="news">ព័ត៌មាន</span></div>
-     <hr class="hr-c">
-     <div class="row">
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/a.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/c.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/c.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/a.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/b.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/c.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-       </div>
-       <div class="c-news"><span class="news">ទំនាក់ទំនងកិច្ចការរដ្ឋបាល</span></div>
-     <hr class="hr-c">
-     <div class="row">
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/d.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/e.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/f.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/a.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/b.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
-           <div class="card h-100">
-             <a href="#"><img class="card-img-top" src="{{asset('front/img/c.jpg')}}" alt="" width="100%"></a>
-             <div class="card-body">
-               <p class="card-text">ឯកឧត្តម ឯម កុសល ស្នងការនគរបាលខេត្តកំពង់ចាម បានចាត់បញ្ជាលោកអធិការស្រុកជើងព្រៃ .</p>
-             </div>
-             <div class="date">
-                01-12-2017
-             </div>
-           </div>
-         </div>
-       </div>
-       </div>
-       <div class="col-md-3">
-         <div class="ad2">អំពីខេតកំពង់ចាម</div>
-         <div class="pd2">
-           <span class="text-danger"> > </span> ស្របពេលពួក គាត់ចុះសំបុត្ រកំណើត សំបុត្រអាពា ហ៍ពិពាហ៍ និងសំបុត្រម រណភាព ដោយឥត គិតថ្លៃ។ <hr>
-              <span class="text-danger"> > </span>  ស្របពេលពួ កគាត់ចុះសំបុ ត្រកំណើត សំបុត្រអា ពាហ៍ពិពាហ៍ និងសំប ុត្រមរណភាព ដោយឥត គិតថ្លៃ។ <hr>
-            <span class="text-danger"> > </span>  ស្របពេលពួកគា ត់ចុះសំបុត្រ កំណើត សំបុត្រអាពា ហ៍ពិពាហ៍ និងសំបុត ្រមរណភាព ដោយឥតគិត ថ្លៃ។ <hr>
-              <span class="text-danger"> > </span> ស្របពេលពួកគា ត់ចុះសំបុត ្រកំណើត សំបុត្រអាព ាហ៍ពិពាហ៍ និងសំបុត្រមរណភាព ដោយឥតគិត ថ្លៃ។ <hr>
-              <span class="text-danger"> > </span> ស្របពេលពួកគា ត់ចុះសំបុត ្រកំណើត សំបុត្រអាពាហ៍ពិពាហ៍ និងសំបុត្រមរណភាព ដោយឥតគិតថ្លៃ។ <hr>
-                <span class="text-danger"> > </span>  ស្របពេលពួកគ ាត់ចុះស បុត្រកំណើត សំបុត្រអា  ពាហ៍ពិពាហ៍ និងសំបុត ្រមរណភាព ដោយឥ តគិតថ្លៃ។ <hr>
-                 <span class="text-danger"> > </span> ស្របពេលពួកគា ត់ចុះសំបុត ្រកំណើត សំបុត្រអាព ាហ៍ពិពាហ៍ និងសំបុត្រមរណភាព ដោយឥតគិត ថ្លៃ។ <hr>
-              <span class="text-danger"> > </span> ស្របពេលពួកគា ត់ចុះសំបុត ្រកំណើត សំបុត្រអាពាហ៍ពិពាហ៍ និងសំបុត្រមរណភាព ដោយឥតគិតថ្លៃ។ <hr>
-                <span class="text-danger"> > </span>  ស្របពេលពួកគ ាត់ចុះស បុត្រកំណើត សំបុត្រអា  ពាហ៍ពិពាហ៍ និងសំបុត ្រមរណភាព ដោយឥ តគិតថ្លៃ។ <hr>
-                 <span class="text-danger"> > </span> ស្របពេលពួកគា ត់ចុះសំបុត ្រកំណើត សំបុត្រអាព ាហ៍ពិពាហ៍ និងសំបុត្រមរណភាព ដោយឥតគិត ថ្លៃ។ <hr>
-              <span class="text-danger"> > </span> ស្របពេលពួកគា ត់ចុះសំបុត ្រកំណើត សំបុត្រអាពាហ៍ពិពាហ៍ និងសំបុត្រមរណភាព ដោយឥតគិតថ្លៃ។ <hr>
-                <span class="text-danger"> > </span>  ស្របពេលពួកគ ាត់ចុះស បុត្រកំណើត សំបុត្រអា  ពាហ៍ពិពាហ៍ និងសំបុត ្រមរណភាព ដោយឥ តគិតថ្លៃ។ <hr>
-                   <span class="text-danger"> > </span>  ស្របពេលពួកគ ាត់ចុះស បុត្រកំណើត សំបុត្រអា  ពាហ៍ពិពាហ៍ និងសំបុត ្រមរណភាព ដោយឥ តគិតថ្លៃ។ <hr>
-         </div>
-       </div>
-     </div>
+		<div class="col-md-9">
+			<?php $news = DB::table('posts')->orderBy('id', 'desc')->where('active',1)->limit(12)->get();?>
+			<div class="c-news">
+				<span class="news">ព័ត៌មានថ្មីៗ</span> <a href="#" style="text-decoration: none;"><span class="text-danger"></span></a>
+			</div>
+			<hr class="hr-c">
+			<div class="row">
+				@foreach($news as $n)
+				<div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
+					<div class="card h-100">
+						<a href="{{url('detail/'.$n->id)}}"><img class="card-img-top" src="{{asset('uploads/posts/250x250/'.$n->feature_image)}}" alt="feature image" width="100%"></a>
+						<div class="card-body">
+						<aside class="card-text"><a style="text-decoration: none; color: #555;" href="{{url('detail/'.$n->id)}}">{{$n->title}}</a></aside>
+						</div>
+						<div class="date">
+						<img src="{{asset('front/img/date.png')}}" alt="date">  : {{$n->create_at}}
+						</div>
+					</div>
+				</div>
+				@endforeach
+			</div>
+	   </div>
+	   <div class="col-md-3">
+	   <?php $about_kampongchams = DB::table('about_kampongchams')->orderBy('id', 'desc')->where('active',1)->limit(20)->get();?>
+			<br>
+			<div class="pd3">អំពីខេតកំពង់ចាម</div>
+			<div class="pd2">
+				@foreach($about_kampongchams as $b)
+					<a style="text-decoration: none; color: #555;" href="{{url('about-kampongcham/detail/'.$b->id)}}">
+					<span class="text-danger"> 
+						<b>></b> 
+					</span> {{$b->title}} <hr>
+					</a>
+				@endforeach
+			</div>
+		</div>
+    </div>
     
    </div>
      <!-- /.row -->

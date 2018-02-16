@@ -65,7 +65,6 @@
             </li>
             <li class="nav-item d-md-down-none">
             </li>
-
         </ul>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }}
@@ -79,13 +78,16 @@
                         <a class="nav-link" href="{{url('/admin/dashboard')}}"><i class="fa fa-tachometer text-primary"></i> {{$lb_dashboard}} </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{url('/post')}}"><i class="fa fa-bullhorn"></i> Post </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/about-kampongcham')}}"><i class="fa fa-bullhorn"></i> About Kampongcham </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{url('/page')}}"><i class="fa fa-columns"></i> Page </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i>Slides</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/video-training')}}"><i class="fa fa-youtube"></i>Youtube Video</a>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
@@ -124,11 +126,10 @@
                 </div>
             </div>
         </main>
-
     </div>
 
     <footer class="app-footer">
-        Copy &copy; {{date('Y')}} by <a href="#">Master Malls</a>
+        Copy &copy; {{date('Y')}} by <a href="#">រដ្ឋបាល ខេត្តកំពង់ចាម</a>
         <span class="float-right">Powered by <a href="http://vdoo.biz" target="_blank">Vdoo</a>
         </span>
     </footer>

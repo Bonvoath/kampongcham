@@ -28,7 +28,6 @@
                             </div>
                         </div>
                     @endif
-
                     <form action="{{url('/category/save')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group row">

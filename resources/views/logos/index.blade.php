@@ -30,7 +30,7 @@
                                     <td>{{$log->name}}</td>
                                     <td><img src="{{URL::asset('/img/').'/'.$log->photo}}" width="65"/></td>
                                     <td>
-                                        <a href="{{url('/logo/edit/'.$log->id)}}" title="Edit"><i class="fa fa-edit text-success"></i></a>&nbsp;&nbsp;
+                                        <a class="btn btn-xs btn-primary" href="{{url('/logo/edit/'.$log->id)}}" title="Edit">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
