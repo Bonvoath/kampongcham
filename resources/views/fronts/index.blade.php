@@ -2,9 +2,9 @@
 @section('content')
      <div class="row">
 		<div class="col-md-9">
-			<?php $news = DB::table('posts')->orderBy('id', 'desc')->where('active',1)->limit(12)->get();?>
+			<?php $news = DB::table('posts')->orderBy('id', 'desc')->where('active',1)->paginate(2);?>
 			<div class="c-news">
-				<span class="news">ព័ត៌មានថ្មីៗ</span> <a href="#" style="text-decoration: none;"><span class="text-danger"></span></a>
+				<span class="news"><img src="{{asset('front/img/file.png')}}"> ព័ត៌មានថ្មីៗ</span> <a href="#" style="text-decoration: none;"><span class="text-danger"></span></a>
 			</div>
 			<hr class="hr-c">
 			<div class="row">
@@ -16,11 +16,16 @@
 						<aside class="card-text"><a style="text-decoration: none; color: #555;" href="{{url('detail/'.$n->id)}}">{{$n->title}}</a></aside>
 						</div>
 						<div class="date">
-						<img src="{{asset('front/img/date.png')}}" alt="date">  : {{$n->create_at}}
+						<img src="{{asset('front/img/date.png')}}" alt="date" width="13">   {{$n->create_at}}
 						</div>
 					</div>
 				</div>
 				@endforeach
+			</div>
+			<div class="row">
+			&nbsp;&nbsp;ទំព័រ: 
+				
+			&nbsp;&nbsp;{{$news->links()}}
 			</div>
 	   </div>
 	   <div class="col-md-3">

@@ -8,7 +8,7 @@ body {
   padding-top: 54px;
 }
 .hr-c {
-	border: 1px solid #cb0003;
+	border: 1px solid #e70e2b;
 }
 @media (min-width: 992px) {
   body {
@@ -22,7 +22,7 @@ p {
 	font-size: 13px;
 }
 .background {
-	background: #f3f3f3;
+	background: #bdb7a7;
 }
 .pd3 {
 	padding: 5px;
@@ -31,6 +31,11 @@ p {
 	text-align: center;
 	background: #cb0003;
 	font-size: 13px;
+}
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
 }
 .detail {
 	background: #fff;
@@ -48,15 +53,15 @@ p {
 		padding: 10px;
 }
 .news {
-	background: #cb0003;
+	background: #e70e2b;
 	padding: 5px;
 }
 .date {
-	border-left: 5px #fa4775 solid;
-	padding-left: 10px;
-	background: #FCE4EC;
-	font-size: 11px;
-	color: #dc3545;
+    border-left: 4px solid rgba(255,0,0,0.4);
+    padding: 5px 0 5px 8px;
+    background: rgba(205,203,204,0.37);
+    font-size: 12px;
+    color: #7b776b;
 }
 .c-news {
 	margin-top: 15px;
@@ -83,10 +88,7 @@ p {
 	font-size: 13px;
 }
 .pd {
-	padding: 5px;
-	border: 1px solid #cb0003;
-	background: #fff;
-	box-shadow: 0 10px 6px -6px #cb0003;
+    padding-top: 10px;
 }
 .pd2 {
 	padding: 10px;
@@ -104,7 +106,8 @@ p {
     padding: 0px;
 }
 .bg-dark {
-    background-color: #c70002 !important;
+	background-color: #c70002 !important;
+	padding: 5px;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
@@ -114,9 +117,28 @@ p {
 	padding: 5px;
 }
 .pagination .active >span {
-	background: #cb0003;
-	color: #fff;
-	padding: 10px 15px;
+	background: #fff;
+	padding: 8px;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
+    border-left: 1px solid #525a63;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-color: #535a63;
+    padding: 5px 13px;
+    line-height: 16px;
+    display: block;
+}
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 13px;
+    color: #fff;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-color: #535a63;
+    padding: 5px 13px;
+    line-height: 16px;
+    display: block;
 }
 .page-title {
 	background: #E3F2FD;
@@ -127,14 +149,17 @@ p {
     font-weight: 800;
 }
 .pagination > li > span{
-    font-weight: 800;
-    border: 1px solid #ccc;
-    padding: 9px 15px;
+    border: 1px solid #e7e7e7;
+	padding: 8px;
+	background: #f7f7f7;
+	margin: 2px;
 }
 .pagination > li > a{
-    font-weight: 800;
-    border: 1px solid #ccc;
-    padding: 9px 15px;
+    border: 1px solid #d7d7d7;
+    padding: 8px;
+    background: #d7d7d7;
+	color: #666;
+	margin: 2px;
 }
 .dropdown-item.active, .dropdown-item:active {
     background-color: #cb0003;
