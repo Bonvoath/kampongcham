@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-9 col-sm-9">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> New Page&nbsp;&nbsp;
+                    <i class="fa fa-align-justify"></i> Add New Page&nbsp;&nbsp;
                     <a href="{{url('/page')}}" class="btn btn-link btn-sm">Back To List</a>
                 </div>
                 <div class="card-block">
@@ -36,20 +36,16 @@
                     >
                         {{csrf_field()}}
                         <div class="form-group row">
-                            <label for="title" class="control-label col-lg-1 col-sm-2">
-                            	Title <span class="text-danger">*</span>
-                            </label>
-                            <div class="col-lg-6 col-sm-8">
+                            <div class="col-sm-12">
+                                <label class="control-label">
+                                    Title <span class="text-danger">*</span>
+                                </label>
                                 <input type="text" required autofocus name="title" id="title" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="description" class="control-label col-lg-1 col-sm-2">
-                                Description
-                            </label>
-                            <div class="col-lg-11 col-sm-10">
-                                <textarea name="description" id="description" rows="6" class="form-control ckeditor">
-                                </textarea>
+                            <div class="col-lg-12 col-sm-12">
+                                <textarea name="description" id="description" rows="12" class="form-control ckeditor" style="width:100%;"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -62,6 +58,9 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="col-sm-3">
+
         </div>
     </div>
 @endsection

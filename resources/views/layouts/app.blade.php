@@ -133,14 +133,11 @@
         <span class="float-right">Powered by <a href="http://vdoo.biz" target="_blank">Vdoo</a>
         </span>
     </footer>
-    <!-- Scripts -->
     <script src="{{asset('js/jquery-2.2.3.min.js')}}"></script>
-    <!-- Bootstrap and necessary plugins -->
     <script src="{{asset('bower_components/jquery/dist/jquery.min.js')}}"></script>
     <script src="{{asset('bower_components/tether/dist/js/tether.min.js')}}"></script>
     <script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('bower_components/pace/pace.min.js')}}"></script>
-<!-- Plugins and scripts required by all views -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/app1.js') }}"></script>
 

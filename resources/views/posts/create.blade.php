@@ -78,7 +78,7 @@
                                 Description
                             </label>
                             <div class="col-lg-11 col-sm-10">
-                                <textarea name="description" id="description" rows="6" class="form-control ckeditor">
+                                <textarea name="description" id="description" rows="6" class="form-control ckeditor" style="width:100%;">
                                 </textarea>
                             </div>
                         </div>

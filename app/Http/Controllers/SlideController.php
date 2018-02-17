@@ -24,6 +24,7 @@ class SlideController extends Controller
         $data['slides'] = DB::table('slides')
             ->where('active',1)
             ->get();
+
         return view('slides.index', $data);
     }
     // load create form
@@ -92,23 +93,22 @@ class SlideController extends Controller
             $file_name = $file->getClientOriginalName();
             $destinationPath = 'img/';
             $file->move($destinationPath, $file_name);
-            $data = array(
-	            'photo' => $file_name,
-            );
+            $data['photo'] = $file_name;
         }
+        
         $sms = "All changes have been saved successfully.";
         $sms1 = "Fail to to save changes, please check again!";
         $i = DB::table('slides')->where('id', $r->id)->update($data);
         if ($i)
         {
             $r->session()->flash('sms', $sms);
-            return redirect('/slide/edit/'.$r->id);
         }
         else
         {
             $r->session()->flash('sms1', $sms1);
-            return redirect('/slide/edit/'.$r->id);
         }
+
+        return redirect('/slide/edit/'.$r->id);
     }
 }
 

@@ -42,7 +42,7 @@
                             	Name
                             </label>
                             <div class="col-lg-3 col-sm-3">
-                                <input type="text" autofocus name="name" id="name" class="form-control" value="{{$logo->name}}">
+                                <input type="text" autofocus name="name" id="name" class="form-control" require value="{{$logo->name}}">
                             </div>
                             <div class="col-lg-3 col-sm-3">
                                 <img src="{{URL::asset('/img/').'/'.$logo->photo}}" width="150" id="img"/>
@@ -66,11 +66,13 @@
             </div>
         </div>
     </div>
-<script>
-    function loadFile(e){
-        var output = document.getElementById('img');
-        output.width = 150;
-        output.src = URL.createObjectURL(e.target.files[0]);
-    }
-</script>
+@endsection
+@section('js')
+    <script>
+        function loadFile(e){
+            var output = document.getElementById('img');
+            output.width = 150;
+            output.src = URL.createObjectURL(e.target.files[0]);
+        }
+    </script>
 @endsection

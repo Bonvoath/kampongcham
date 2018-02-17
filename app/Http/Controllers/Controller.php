@@ -10,4 +10,14 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            if (Auth::user()==null)
+            {
+                return redirect("/login");
+            }
+            return $next($request);
+        });
+    }
 }

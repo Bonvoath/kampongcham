@@ -21,8 +21,8 @@ class LogoController extends Controller
     // index
     public function index()
     {
-        $data['logo'] = DB::table('logos')
-            ->get();
+        $data['logo'] = DB::table('logos')->get();
+
         return view('logos.index', $data);
     }
     // load create form
@@ -61,8 +61,8 @@ class LogoController extends Controller
 
     public function edit($id)
     {
-        $data['logo'] = DB::table('logos')
-            ->where('id',$id)->first();
+        $data['logo'] = DB::table('logos')->where('id',$id)->first();
+
         return view('logos.edit', $data);
     }
     
@@ -76,23 +76,21 @@ class LogoController extends Controller
             $file_name = $file->getClientOriginalName();
             $destinationPath = 'img/';
             $file->move($destinationPath, $file_name);
-            $data = array(
-	            'photo' => $file_name,
-            );
+            $data['photo'] = $file_name;
         }
+
         $sms = "All changes have been saved successfully.";
         $sms1 = "Fail to to save changes, please check again!";
         $i = DB::table('logos')->where('id', $r->id)->update($data);
         if ($i)
         {
             $r->session()->flash('sms', $sms);
-            return redirect('/logo/edit/'.$r->id);
         }
         else
         {
             $r->session()->flash('sms1', $sms1);
-            return redirect('/logo/edit/'.$r->id);
         }
+
+        return redirect('/logo/edit/'.$r->id);
     }
 }
-
