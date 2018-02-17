@@ -4,19 +4,20 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> Page List&nbsp;&nbsp;
+                    <i class="fa fa-align-justify"></i> Pages &nbsp;&nbsp;
                     <a href="{{url('/page/create')}}" class="btn btn-link btn-sm">
-                        New
+                        Add New
                     </a>
                 </div>
-                <div class="card-block">
-
-                    <table class="tbl">
+                <div class="card-block" style="padding: 0;">
+                    <table class="table table-striped table-condensed">
                         <thead>
                             <tr>
-                                <th>&numero;</th>
+                                <th><input type="checkbox"/></th>
                                 <th>Title</th>
-                                <th>Action</th>
+                                <th>Author</th>
+                                <th>Date</th>
+                                <th style="width:180px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -25,11 +26,12 @@
                                 <tr>
                                     <td>{{$i++}}</td>
                                     <td>{{$pag->title}}</td>
+                                    <td>admin</td>
+                                    <td>{{$pag->create_at}}</td>
                                     <td>
-                                        <a class="btn btn-xs btn-info" href="{{url('/page/view/'.$pag->id)}}" title="view">Detail</a>
-                                        <a class="btn btn-xs btn-primary"  href="{{url('/page/edit/'.$pag->id)}}" title="Edit">Edit</a>
-                                       <a class="btn btn-xs btn-danger"  href="{{url('/page/delete/'.$pag->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete">Delete</a>
-                                    
+                                        <a class="" href="{{url('/page/view/'.$pag->id)}}" title="view">Detail</a> | 
+                                        <a class=""  href="{{url('/page/edit/'.$pag->id)}}" title="Edit">Edit</a> | 
+                                       <a class=""  href="{{url('/page/delete/'.$pag->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -37,10 +37,7 @@
                         {{csrf_field()}}
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <label class="control-label">
-                                    Title <span class="text-danger">*</span>
-                                </label>
-                                <input type="text" required autofocus name="title" id="title" class="form-control">
+                                <input type="text" required autofocus name="title" id="title" class="form-control" placeholder="Enter title here">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -49,7 +46,6 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="control-label col-lg-1 col-sm-2">&nbsp;</label>
                             <div class="col-lg-6 col-sm-8">
                                 <button class="btn btn-primary" type="submit">Save</button>
                                 <button class="btn btn-danger" type="reset">Cancel</button>
