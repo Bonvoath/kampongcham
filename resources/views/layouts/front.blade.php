@@ -55,7 +55,7 @@
           </ul>
           <ul class="navbar-nav ml-auto">
              <li class="nav-item">
-              <a style="color: #fff; font-family:Hanuman, serif !important;" href="#"> KH</a> <span style="color:#fff;">| </span>   <a style="font-family:Hanuman, serif !important; color: #fff;" href="#">EN</a>
+                <a style="color: #fff; font-family:Hanuman, serif !important;" href="#"> KH</a> <span style="color:#fff;">| </span>   <a style="font-family:Hanuman, serif !important; color: #fff;" href="#">EN</a>
             </li>
           </ul>
         </div>

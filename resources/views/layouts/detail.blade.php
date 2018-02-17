@@ -53,9 +53,9 @@
         @endforeach
         
       </ul>
-          <ul class="navbar-nav ml-auto" style="background: #fff;">
+          <ul class="navbar-nav ml-auto">
              <li class="nav-item">
-              <a class="nav-link" href="#"><img src="{{asset('front/img/kh.png')}}" width="25"> <img src="{{asset('front/img/en.png')}}" width="25"></a>
+             <a style="color: #fff; font-family:Hanuman, serif !important;" href="#"> KH</a> <span style="color:#fff;"> | </span>   <a style="font-family:Hanuman, serif !important; color: #fff;" href="#">EN</a>
             </li>
           </ul>
         </div>
