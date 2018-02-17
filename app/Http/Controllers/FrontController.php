@@ -5,8 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
+use Session;
 class FrontController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+           app()->setLocale(Session::get("lang"));
+            return $next($request);
+        });
+    }
     // index
     public function index()
     {

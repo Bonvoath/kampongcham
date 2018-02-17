@@ -149,7 +149,7 @@ Route::post('/admin/product/photo/upload', "ProductController@upload_photo");
 // featured product admin
 Route::get('/admin/feature/product', "FeaturedProductController@index");
 Route::get('/admin/feature/product/delete/{id}', "FeaturedProductController@delete");
-
+Route::get('/language/{id}', "LangController@index");
 // Post
 Route::get('/post', 'PostController@index');
 Route::get('/post/create', 'PostController@create');

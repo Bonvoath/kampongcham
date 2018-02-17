@@ -23,12 +23,12 @@
             ->select('a.*', 'b.name as parent_name')
             ->where('a.active',1)
             ->where('a.parent_id', 0)
-            ->paginate(18);
+            ->get();
           ?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="{{url('/')}}">ទំព័រដើម
+              <a class="nav-link" href="{{url('/')}}">{{trans("labels.home")}}
               </a>
             </li>
             @foreach($categories as $cat)
@@ -55,7 +55,7 @@
           </ul>
           <ul class="navbar-nav ml-auto">
              <li class="nav-item">
-                <a style="color: #fff; font-family:Hanuman, serif !important;" href="#"> KH</a> <span style="color:#fff;">| </span>   <a style="font-family:Hanuman, serif !important; color: #fff;" href="#">EN</a>
+                <a style="color: #fff; font-family:Hanuman, serif !important;" href="#" onclick="chLang(event,'km')"> KH</a> <span style="color:#fff;">| </span>   <a style="font-family:Hanuman, serif !important; color: #fff;" href="#" onclick="chLang(event,'en')">EN</a>
             </li>
           </ul>
         </div>
@@ -121,6 +121,22 @@
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 </script>
+    <script>
+        function chLang(evt, ln)
+        {
+            evt.preventDefault();
+            $.ajax({
+                type: "GET",
+                url: "{{url('/')}}" + "/language/" + ln,
+                success: function(sms){
+                    if(sms>0)
+                    {
+                        location.reload();
+                    }
+                }
+            });
+        }
+    </script>
  </body>
 
 </html>
