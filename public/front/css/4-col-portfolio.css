@@ -8,7 +8,7 @@ body {
   padding-top: 54px;
 }
 .hr-c {
-	border: 1px solid #e70e2b;
+	border: 1px solid #e60e2b;
 }
 @media (min-width: 992px) {
   body {
@@ -29,8 +29,8 @@ p {
 	width: 100%;
 	color: #fff;
 	text-align: center;
-	background: #cb0003;
-	font-size: 13px;
+    background: #CA0002;
+	font-size: 18px;
 }
 .card-img-top {
     width: 100%;
@@ -53,7 +53,7 @@ p {
 		padding: 10px;
 }
 .news {
-	background: #e70e2b;
+	background: #e60e2b;
 	padding: 5px;
 }
 .date {
@@ -71,12 +71,12 @@ p {
 }
 .ad {
 	margin-top: 5px;
-	padding: 5px;
-	width: 100%;
-	color: #fff;
-	text-align: center;
-	background: #cb0003;
-	font-size: 13px;
+    padding: 5px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: #CA0002;
+    font-size: 18px;
 }
 .ad2 {
 	margin-top: 10px;
@@ -84,7 +84,7 @@ p {
 	width: 100%;
 	color: #fff;
 	text-align: center;
-	background: #cb0003;
+	background: #ca0002;
 	font-size: 13px;
 }
 .pd {
@@ -106,8 +106,8 @@ p {
     padding: 0px;
 }
 .bg-dark {
-	background-color: #c70002 !important;
-	padding: 5px;
+	background-color: #B60002 !important;
+	padding: 10px;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
@@ -118,7 +118,7 @@ p {
 }
 .pagination .active >span {
 	background: #fff;
-	padding: 8px;
+	padding: 3px 6px;
 }
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
     color: #fff;
@@ -150,13 +150,13 @@ p {
 }
 .pagination > li > span{
     border: 1px solid #e7e7e7;
-	padding: 8px;
+	padding: 3px 6px;
 	background: #f7f7f7;
 	margin: 2px;
 }
 .pagination > li > a{
     border: 1px solid #d7d7d7;
-    padding: 8px;
+    padding: 3px 6px;
     background: #d7d7d7;
 	color: #666;
 	margin: 2px;

@@ -38,7 +38,7 @@
                         {{csrf_field()}}
                         <input type="hidden" name="id" id="id" value="{{$slide->id}}">
                         <div class="form-group row">
-                            <label for="name" class="control-label col-lg-1 col-sm-2">
+                            <label for="name" class="control-label col-lg-2 col-sm-2">
                             	Name <span class="text-danger">*</span>
                             </label>
                             <div class="col-lg-3 col-sm-3">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="order" class="control-label col-lg-1 col-sm-2">
+                            <label for="order" class="control-label col-lg-2 col-sm-2">
                             	Order 
                             </label>
                             <div class="col-lg-6 col-sm-8">
@@ -57,14 +57,14 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="photo" class="control-label required col-lg-1 col-sm-2">Image  <span class="text-danger">*</span></label>
+                            <label for="photo" class="control-label required col-lg-2 col-sm-2">Image <span class="text-primary">(900 X 400)</span> </label>
                             <div class="col-lg-6 col-sm-8">
                                 <input type="file" name="photo" id="photo" accept="image/*" onchange="loadFile(event)">
                             </div>
 
                         </div>   
                         <div class="form-group row">
-                            <label class="control-label col-lg-1 col-sm-2">&nbsp;</label>
+                            <label class="control-label col-lg-2 col-sm-2">&nbsp;</label>
                             <div class="col-lg-6 col-sm-8">
                                 <button class="btn btn-primary" type="submit">Save Change</button>
                             </div>

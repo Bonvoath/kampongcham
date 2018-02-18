@@ -15,7 +15,7 @@
                         <thead>
                             <tr>
                                 <th>&numero;</th>
-                                <th>Image</th>
+                                <th>Image <span class="text-primary">(900 X 400)</span> </th>
                                 <th>Name</th>
                                 <th>Order</th>
                                 <th>Action</th>
