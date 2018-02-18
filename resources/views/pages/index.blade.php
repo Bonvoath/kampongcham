@@ -1,12 +1,12 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('content')
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> Pages &nbsp;&nbsp;
+                    <i class="fa fa-align-justify"></i> តារាងទំព័រ | 
                     <a href="{{url('/page/create')}}" class="btn btn-link btn-sm">
-                        Add New
+                        បន្ថែមថ្មី
                     </a>
                 </div>
                 <div class="card-block" style="padding: 0;">
@@ -14,10 +14,10 @@
                         <thead>
                             <tr>
                                 <th><input type="checkbox"/></th>
-                                <th>Title</th>
-                                <th>Author</th>
-                                <th>Date</th>
-                                <th style="width:180px;">Action</th>
+                                <th>ចំនងជើង</th>
+                                <th>អ្នកបង្កើត</th>
+                                <th>កាលបរិច្ឆេទ</th>
+                                <th style="width:180px;">សកម្មភាព</th>
                             </tr>
                         </thead>
                         <tbody>

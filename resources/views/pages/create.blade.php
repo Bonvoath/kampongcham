@@ -4,8 +4,8 @@
         <div class="col-lg-9 col-sm-9">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> Add New Page&nbsp;&nbsp;
-                    <a href="{{url('/page')}}" class="btn btn-link btn-sm">Back To List</a>
+                    <i class="fa fa-align-justify"></i> បន្កើតទំព័រថ្មី | 
+                    <a href="{{url('/page')}}" class="btn btn-link btn-sm">ត្រលប់ក្រោយ</a>
                 </div>
                 <div class="card-block">
                     @if(Session::has('sms'))
@@ -42,13 +42,13 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-12 col-sm-12">
-                                <textarea name="description" id="description" rows="12" class="form-control ckeditor" style="width:100%;"></textarea>
+                                <textarea name="description" id="description" rows="12" class="form-control ckeditor"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-6 col-sm-8">
-                                <button class="btn btn-primary" type="submit">Save</button>
-                                <button class="btn btn-danger" type="reset">Cancel</button>
+                                <button class="btn btn-primary" type="submit">រក្សាទុក</button>
+                                <button class="btn btn-danger" type="reset">សំអាត</button>
                             </div>
                         </div>
                     </form>

@@ -8,13 +8,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="School Management System">
+    <meta name="description" content="Kampong Cham News">
     <meta name="author" content="vdoo.biz">
     <meta name="keyword" content="School, Student, Student Management System, School Management System">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Job Website Admin</title>
-
+    <title>Kampong Cham Web Admin</title>
      <!-- Chosen  -->
     <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
     <!-- Icons -->
@@ -24,6 +23,7 @@
     <!-- Main styles for this application -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+	<link href="{{asset('css/embed_font.css')}}" rel="stylesheet">
     <link href="{{asset('datepicker/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
     <script>
         var burl = "{{url('/')}}";
@@ -78,13 +78,13 @@
                         <a class="nav-link" href="{{url('/admin/dashboard')}}"><i class="fa fa-tachometer text-primary"></i> {{$lb_dashboard}} </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/post')}}"><i class="fa fa-bullhorn"></i> Post </a>
+                        <a class="nav-link" href="{{url('/post')}}"><i class="fa fa-bullhorn"></i> Posts </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/about-kampongcham')}}"><i class="fa fa-bullhorn"></i> About Kampongcham </a>
+                        <a class="nav-link" href="{{url('/page')}}"><i class="fa fa-columns"></i> Pages </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/page')}}"><i class="fa fa-columns"></i> Page </a>
+                        <a class="nav-link" href="{{url('/menu')}}"><i class="fa fa-columns"></i> Menus </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i>Slide</a>
