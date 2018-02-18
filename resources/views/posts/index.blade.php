@@ -9,29 +9,31 @@
                         New
                     </a>
                 </div>
-                <div class="card-block">
-
-                    <table class="tbl">
+                <div class="card-block" style="padding: 0;">
+                    <table class="table table-striped table-condensed">
                         <thead>
                             <tr>
-                                <th>&numero;</th>
-                                <th>Feature Image</th>
-                                <th>Title</th>
-                                <th>Action</th>
+                                <th><input type="checkbox"/></th>
+                                <th>ចំណងជើង</th>
+                                <th>អ្នកបង្កើត</th>
+                                <th>កាលបរិច្ឆេទ</th>
+                                <th>សកម្មភាព</th>
                             </tr>
                         </thead>
                         <tbody>
                             @php($i=1)
                             @foreach($posts as $p)
                                 <tr>
-                                    <td>{{$i++}}</td>
-                                    <td><img src="{{asset('uploads/posts/250x250/'.$p->feature_image)}}" alt="feature image" width="100"></td>
-                                    <td>{{$p->title}}</td>
+                                    <td><input type="checkbox"/></td>
+                                    <td><a href="{{url('/post/edit/'.$p->id)}}" title="Edit">{{$p->title}}</a></td>
+                                    <td>{{$p->create_by}}</td>
+                                    <td>{{$p->create_at}}</td>
                                     <td>
-                                        <a class="btn btn-xs btn-info" href="{{url('/post/view/'.$p->id)}}" title="Detail">Detail</a>
-                                        <a class="btn btn-xs btn-primary" href="{{url('/post/edit/'.$p->id)}}" title="Edit">Edit</a>
-                                       <a class="btn btn-xs btn-danger"href="{{url('/post/delete/'.$p->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete">Delete</a>
-                          
+                                        <a href="{{url('/post/view/'.$p->id)}}" title="Detail">Detail</a>
+                                        
+                                       <a href="{{url('/post/delete/'.$p->id)}}" onclick="return confirm('Do you want to delete?')" title="Delete">Delete</a>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table><br>

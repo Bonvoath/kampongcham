@@ -1,7 +1,12 @@
 @extends('layouts.app')
 @section('content')
+<form 
+    action="{{url('/post/update')}}" 
+    class="form-horizontal" 
+    method="post"
+    enctype="multipart/form-data">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-9 col-sm-9">
             <div class="card">
                 <div class="card-header text-bold">
                     <i class="fa fa-align-justify"></i> Edit Post&nbsp;&nbsp;
@@ -28,73 +33,70 @@
                             </div>
                         </div>
                     @endif 
-                    <form 
-                    	action="{{url('/post/update')}}" 
-                    	class="form-horizontal" 
-                        method="post"
-                        enctype="multipart/form-data"
-                    >
                         {{csrf_field()}}
                         <input type="hidden" id="id" name="id" value="{{$post->id}}">
-                        <div class="form-group row">
-                            <label for="title" class="control-label col-lg-2 col-sm-2">
-                            	Title <span class="text-danger">*</span>
-                            </label>
-                            <div class="col-lg-6 col-sm-8">
+                        <div class="form-group">
+                            <div class="col-lg-12 col-sm-12">
                                 <input type="text" required autofocus name="title" id="title" class="form-control" value="{{$post->title}}">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="parent" class="control-label col-lg-2 col-sm-2">Category</label>
-                            <div class="col-lg-6 col-sm-8">           
-                                <select class="form-control" name="parent" id="parent"  id="parent">
-                                    <?php foreach ($categories as $cat): ?>
-                                        <option value="{{$cat->id}}"  {{$cat->id==$post->category_id?'selected':''}}> {{ $cat->name }}</option>
-                                       
-                                    <?php endforeach ?>                    
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="short_description" class="control-label col-lg-2 col-sm-2">
-                                Short Description <span class="text-danger">*</span>
-                            </label>
-                            <div class="col-lg-6 col-sm-8">
+                        <div class="form-group">
+                            <div class="col-lg-12 col-sm-12">
                                 <textarea name="short_description" id="short_description" rows="6" required class="form-control">{{$post->short_description}}</textarea>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="feature_image" class="control-label col-lg-2 col-sm-2">Feature Image <span class="text-danger">*</span></label>
-                            <div class="col-lg-6 col-sm-8">
-                                <input type="file" name="feature_image" id="feature_image" accept="image/*" class="form-control" onchange="loadFile(event)">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="contact" class="control-label col-lg-2 col-sm-2"></label>
-                            <div class="col-lg-6 col-sm-8">
-                                <img src="{{asset('uploads/posts/250x250/'.$post->feature_image)}}" id="img" width="150">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="description" class="control-label col-lg-2 col-sm-2">
-                                Description
-                            </label>
-                            <div class="col-lg-11 col-sm-10">
+                        
+                        <div class="form-group">
+                            <div class="col-lg-12 col-sm-12">
                                 <textarea name="description" id="description" rows="6" class="form-control ckeditor">{{$post->description}}
                                 </textarea>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-6 col-sm-8">
-                                <button class="btn btn-primary" type="submit">Save Change</button>
-                                <button class="btn btn-danger" type="reset">Cancel</button>
-                            </div>
-                        </div>
-                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <div class="card">
+                <div class="card-header">
+                    Public
+                </div>
+                <div class="card-block">
+                    <div>
+                        <button class="btn btn-primary" type="submit">Public</button>
+                        <button class="btn btn-danger" type="reset">Preview</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    Categories
+                </div>
+                <div class="card-block">
+                    <div>
+                        <select class="form-control" name="parent" id="parent">
+                            <?php foreach ($categories as $cat): ?>
+                                <option value="{{$cat->id}}"  {{$cat->id==$post->category_id?'selected':''}}> {{ $cat->name }}</option>
+                            <?php endforeach ?>                    
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    Feature Image
+                </div>
+                <div class="card-block">
+                    <div>
+                        <input type="file" name="feature_image" id="feature_image" accept="image/*" class="form-control" onchange="loadFile(event)">
+                    </div>
+                    <div>
+                        <img src="{{asset('uploads/posts/250x250/'.$post->feature_image)}}" id="img" width="100%">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </form>
 @endsection
 @section('js')
 <script>
