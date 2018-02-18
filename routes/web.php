@@ -157,3 +157,7 @@ Route::post('/post/save', 'PostController@save');
 Route::get('/post/edit/{id}', 'PostController@edit');
 Route::post('/post/update', 'PostController@update');
 Route::post('/post/delete', 'PostController@delete');
+
+// Menu
+Route::get('/admin/menu', 'MenuController@index');
+Route::get('/admin/menu/create', 'MenuController@create');

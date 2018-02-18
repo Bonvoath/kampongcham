@@ -84,7 +84,7 @@
                         <a class="nav-link" href="{{url('/page')}}"><i class="fa fa-columns"></i> Pages </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/menu')}}"><i class="fa fa-columns"></i> Menus </a>
+                        <a class="nav-link" href="{{url('/admin/menu')}}"><i class="fa fa-columns"></i> Menus </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i>Slide</a>
