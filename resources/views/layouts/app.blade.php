@@ -111,11 +111,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{url('/category')}}"><i class="fa fa-tags"></i>Category</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="{{url('/logo')}}">
                                     <i class="fa fa-bullseye"></i>Banner
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                 </ul>
