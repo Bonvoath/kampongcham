@@ -23,7 +23,23 @@
             <div class="card">
                 <div class="card-header">Custom Link <span class="circle pull-right clickable collapsed"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></div>
                 <div class="card-block" style="display:none;">
-                
+                    <div class="form-group">
+                        <label for="">URL (http://www.example.com)</label>
+                        <div>
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Link Text</label>
+                        <div>
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-secondary btn-sm radius-3">Add To Menu</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

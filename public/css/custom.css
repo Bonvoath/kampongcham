@@ -52,6 +52,14 @@ span.circle{
     cursor: pointer;
 }
 
+span.circle>i.fa-chevron-right{
+    margin-left: 3px;
+}
+
 span.circle:hover{
     background: #fff;
+}
+
+.radius-3{
+    border-radius: 3px;
 }
