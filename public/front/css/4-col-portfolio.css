@@ -22,7 +22,7 @@ p {
 	font-size: 13px;
 }
 .background {
-	background: #bdb7a7;
+	background: #F6F6F6;
 }
 .pd3 {
 	padding: 5px;
@@ -52,10 +52,7 @@ p {
 .card-body {
 		padding: 10px;
 }
-.news {
-	background: #e60e2b;
-	padding: 5px;
-}
+
 .date {
     border-left: 4px solid rgba(255,0,0,0.4);
     padding: 5px 0 5px 8px;
@@ -65,10 +62,17 @@ p {
 }
 .c-news {
 	margin-top: 15px;
-	margin-bottom: -14px;
-	font-size: 13px;
+	font-size: 16px;
+	border-bottom: 3px solid #e60e2b;
 	color: #fff;
 }
+
+.c-news>.news {
+	background: #e60e2b;
+	padding: 5px 10px;
+	display: inline-block;
+}
+
 .ad {
 	margin-top: 5px;
     padding: 5px;
@@ -121,21 +125,14 @@ p {
 	padding: 3px 6px;
 }
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
-    color: #fff;
-    border-left: 1px solid #525a63;
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-color: #535a63;
+    color: rgba(255,255,255,.8);
     padding: 5px 13px;
     line-height: 16px;
     display: block;
 }
 .navbar-dark .navbar-nav .nav-link {
-    font-size: 13px;
-    color: #fff;
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-color: #535a63;
+    font-size: 16px;
+    color: rgba(255,255,255,.8);
     padding: 5px 13px;
     line-height: 16px;
     display: block;

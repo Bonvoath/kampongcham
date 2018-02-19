@@ -11,3 +11,11 @@
 body{
     font-family: KhContent;
 }
+
+.font-KL{
+    font-family: KhKulen !important;
+}
+
+.font-KC{
+    font-family: KhContent;
+}

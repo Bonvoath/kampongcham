@@ -4,10 +4,9 @@
 		<div class="col-md-9">
 			<?php $news = DB::table('posts')->orderBy('id', 'desc')->where('active',1)->paginate(2);?>
 			<div class="c-news">
-				<span class="news"><img src="{{asset('front/img/file.png')}}"> ព័ត៌មានថ្មីៗ</span> <a href="#" style="text-decoration: none;"><span class="text-danger"></span></a>
+				<span class="news font-KL">ព័ត៌មានថ្មីៗ</span>
 			</div>
-			<hr class="hr-c">
-			<div class="row">
+			<div class="row" style="margin-top: 15px; background: #fff;">
 				@foreach($news as $n)
 				<div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
 					<div class="card h-100">
@@ -22,28 +21,21 @@
 				</div>
 				@endforeach
 			</div>
-			<div class="row">
-			&nbsp;&nbsp;ទំព័រ: 
-				
-			&nbsp;&nbsp;{{$news->links()}}
-			</div>
+			<div class="row"><span>ទំព័រ:</span>{{$news->links()}}</div>
 	   </div>
 	   <div class="col-md-3">
 	   <?php $about_kampongchams = DB::table('about_kampongchams')->orderBy('id', 'desc')->where('active',1)->limit(20)->get();?>
 			<br>
-			<div class="pd3">អំពីខេតកំពង់ចាម</div>
+			<div class="pd3 font-KL">អំពីខេតកំពង់ចាម</div>
 			<div class="pd2">
 				@foreach($about_kampongchams as $b)
 					<a style="text-decoration: none; color: #555;" href="{{url('about-kampongcham/detail/'.$b->id)}}">
 					<span class="text-danger"> 
-						<b>></b> 
 					</span> {{$b->title}} <hr>
 					</a>
 				@endforeach
 			</div>
 		</div>
     </div>
-    
    </div>
-     <!-- /.row -->
 @endsection

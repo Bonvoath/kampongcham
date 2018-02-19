@@ -10,6 +10,7 @@
     <link href="{{asset('front/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{asset('front/css/4-col-portfolio.css')}}" rel="stylesheet">
+    <link href="{{asset('css/embed_font.css')}}" rel="stylesheet">
   </head>
   <body>
     <center><div style="margin-top: -57px; magin-button: 5px; background: #cb0003;" ><a class="text-danger" href="{{url('/')}}"><img src="{{asset('front/img/Untitled-28.png')}}" width="100%"></a></div></center> 
@@ -26,7 +27,7 @@
         ->paginate(18);
       ?>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav font-KL">
         <li class="nav-item active">
           <a class="nav-link" href="{{url('/')}}">ទំព័រដើម
           </a>
@@ -72,7 +73,7 @@
                 <div class="col-md-3">
                     <?php $about_kampongchams = DB::table('about_kampongchams')->orderBy('id', 'desc')->where('active',1)->limit(20)->get();?>
                     <br>
-                    <div class="pd3">អំពីខេតកំពង់ចាម</div>
+                    <div class="pd3">អំពីខេត្តកំពង់ចាម</div>
                     <div class="pd2">
                         @foreach($about_kampongchams as $b)
                           <a style="text-decoration: none; color: #555;" href="{{url('about-kampongcham/detail/'.$b->id)}}">

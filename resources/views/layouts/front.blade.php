@@ -10,6 +10,7 @@
     <link href="{{asset('front/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{asset('front/css/4-col-portfolio.css')}}" rel="stylesheet">
+    <link href="{{asset('css/embed_font.css')}}" rel="stylesheet">
   </head>
   <body>
     <center><div style="margin-top: -57px; magin-button: 5px; background: #cb0003;" ><a class="text-danger" href="{{url('/')}}"><img src="{{asset('front/img/Untitled-28.png')}}" width="100%"></a></div></center> 
@@ -26,7 +27,7 @@
             ->get();
           ?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav font-KL">
             <li class="nav-item active">
               <a class="nav-link" href="{{url('/')}}">{{trans("labels.home")}}
               </a>
@@ -93,7 +94,7 @@
             </div>
             </div>
             <div class="col-md-3">
-              <div class="ad">សារលិខិតរបស់អភិបាល</div>
+              <div class="ad font-KL">សារលិខិតរបស់អភិបាល</div>
               <div class="pd">
                 <a href="{{url('page/message-from-the-governor')}}"><img src="{{asset('front/img/minister.jpg')}}" width="100%"></a>
               </div>
