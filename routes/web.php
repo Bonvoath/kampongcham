@@ -23,6 +23,13 @@ Route::get('/logo/create', "LogoController@create");
 Route::post('/logo/save', "LogoController@save");
 Route::get('/logo/edit/{id}', "LogoController@edit");
 Route::post('/logo/update', "LogoController@update");
+// governor history
+Route::get('/governor-history', "GovernorHistoryController@index");
+Route::get('/governor-history/create', "GovernorHistoryController@create");
+Route::post('/governor-history/save', "GovernorHistoryController@save");
+Route::get('/governor-history/edit/{id}', "GovernorHistoryController@edit");
+Route::post('/governor-history/update', "GovernorHistoryController@update");
+Route::get('/governor-history/delete/{id}', "GovernorHistoryController@delete");
 // Slide 
 Route::get('/slide', "SlideController@index");
 Route::get('/slide/create', "SlideController@create");

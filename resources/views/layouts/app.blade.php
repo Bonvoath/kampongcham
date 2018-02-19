@@ -89,6 +89,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i>Slide</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/governor-history')}}"><i class="fa fa-table"></i>Governor History</a>
+                    </li>
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
                             <i class="fa fa-key text-danger"></i> {{$lb_security}}</a>
