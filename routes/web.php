@@ -140,7 +140,7 @@ Route::get('/post/view/{id}', "PostController@view");
 // front page
 Route::get('/page/about', "FrontPageController@about");
 Route::get('/page/contact', "FrontPageController@contact");
-Route::get('/page/message-from-the-governor', "FrontPageController@message");
+Route::get('/page/message-from-the-governor/{id}', "FrontPageController@message");
 // test
 Route::get('/test', "TestController@index");
 // product admin

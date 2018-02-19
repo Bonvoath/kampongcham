@@ -95,8 +95,13 @@
             </div>
             <div class="col-md-3">
               <div class="ad font-KL">សារលិខិតរបស់អភិបាល</div>
+              <?php $gov = DB::table('governor_histories')->orderBy('id', 'desc')->limit(1)->get();?>
               <div class="pd">
-                <a href="{{url('page/message-from-the-governor')}}"><img src="{{asset('front/img/minister.jpg')}}" width="100%"></a>
+                @foreach($gov as $g)
+                <a href="#"><img src="{{url('img/'.$g->photo)}}" width="100%"></a>
+                <aside align="center">{{$g->name}}</aside>
+                <aside align="center"> Start Date:{{$g->start_year}} - End Date {{$g->end_year}}</aside>
+                @endforeach
               </div>
             </div>
         </div>

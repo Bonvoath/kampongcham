@@ -18,6 +18,8 @@
                                 
                                 <th>Image</th>
                                 <th>Name</th>
+                                <th>Start Year</th>
+                                <th>End Year</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -28,6 +30,9 @@
                                     <td>{{$i++}}</td>
                                     <td><img src="{{URL::asset('/img/').'/'.$g->photo}}" width="65"/></td>
                                     <td>{{$g->name}}</td>
+                                    <td>{{$g->start_year}}</td>
+                                    <td>{{$g->end_year}}</td>
+                                   
                                     <td>
                                         <a class="btn btn-xs btn-primary" href="{{url('/governor-history/edit/'.$g->id)}}" title="Edit">Edit</a>
                                         <a class="btn btn-xs btn-danger"  href="{{url('/governor-history/delete/'.$g->id)}}" title="Delete">Delete</a>

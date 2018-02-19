@@ -22,9 +22,9 @@ class FrontPageController extends Controller
             ->first();
         return view('fronts.pages.contact', $data);
     }
-    public function message()
+    public function message($id)
     {
-        $data['message'] = DB::table('pages')
+        $data['message'] = DB::table('governor_histories')
             ->where('id', 3)
             ->first();
         return view('fronts.pages.message', $data);
