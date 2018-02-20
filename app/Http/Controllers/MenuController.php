@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Menus;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
 
 class MenuController extends Controller
 {
@@ -15,7 +16,19 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('menus.index');
+        $this->data['categories'] = DB::table('categories')
+            ->where('active', 1)
+            ->get();
+
+        $this->data['pages'] = DB::table('pages')
+            ->where('active', 1)
+            ->get();
+
+        $this->data['posts'] = DB::table('posts')
+            ->where('active', 1)
+            ->get();
+
+        return view('menus.index', $this->data);
     }
 
     /**

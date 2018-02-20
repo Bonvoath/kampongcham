@@ -5,19 +5,46 @@
             <div class="card" style="margin-bottom:2px;">
                 <div class="card-header">Pages <span class="circle clickable pull-right"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
                 <div class="card-block">
-                    
+                <ul class="list-group">
+                    @foreach($pages as $page)
+                        <li class="list-group-item chh_categories"><input type="checkbox" data-id="{{$page->id}}"/> {{$page->title}}</li>
+                    @endforeach
+                    </ul>
+                    <div class="form-group" style="margin-top: 5px; margin-bottom: 0;">
+                        <div style="text-align: right;">
+                            <button type="button" id="btnaddcat" class="btn btn-secondary btn-sm radius-3">Add To Menu</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card" style="margin-bottom:2px;">
                 <div class="card-header">Posts <span class="circle pull-right clickable collapsed"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></div>
                 <div class="card-block" style="display:none;">
-                
+                <ul class="list-group">
+                    @foreach($posts as $post)
+                        <li class="list-group-item chh_categories"><input type="checkbox" data-id="{{$post->id}}"/> {{$post->title}}</li>
+                    @endforeach
+                    </ul>
+                    <div class="form-group" style="margin-top: 5px; margin-bottom: 0;">
+                        <div style="text-align: right;">
+                            <button type="button" id="btnaddcat" class="btn btn-secondary btn-sm radius-3">Add To Menu</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card" style="margin-bottom:2px;">
                 <div class="card-header">Categories <span class="circle pull-right clickable collapsed"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></div>
                 <div class="card-block" style="display:none;">
-                
+                    <ul class="list-group">
+                    @foreach($categories as $cat)
+                        <li class="list-group-item chh_categories"><input type="checkbox" data-id="{{$cat->id}}"/> {{$cat->name}}</li>
+                    @endforeach
+                    </ul>
+                    <div class="form-group" style="margin-top: 5px; margin-bottom: 0;">
+                        <div style="text-align: right;">
+                            <button type="button" id="btnaddcat" class="btn btn-secondary btn-sm radius-3">Add To Menu</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card">
@@ -26,18 +53,18 @@
                     <div class="form-group">
                         <label for="">URL (http://www.example.com)</label>
                         <div>
-                            <input type="text" class="form-control input-sm">
+                            <input type="text" id="linkmenuurl" class="form-control input-sm">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="">Link Text</label>
                         <div>
-                            <input type="text" class="form-control input-sm">
+                            <input type="text" id="linkmenutext" class="form-control input-sm">
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="margin-bottom: 0;">
                         <div style="text-align: right;">
-                            <button type="button" class="btn btn-secondary btn-sm radius-3">Add To Menu</button>
+                            <button type="button" id="btnaddlink" class="btn btn-secondary btn-sm radius-3">Add To Menu</button>
                         </div>
                     </div>
                 </div>
@@ -47,7 +74,7 @@
             <div class="card">
                 <div class="card-header">Menus</div>
                 <div class="card-block">
-                    <ul class="list-group">
+                    <ul class="list-group" id="menu_list">
                         <li class="list-group-item">Cras justo odio</li>
                         <li class="list-group-item">Dapibus ac facilisis in</li>
                         <li class="list-group-item">Morbi leo risus</li>
@@ -60,18 +87,5 @@
     </div>
 @endsection
 @section('js')
-    <script>
-        $('body').on('click', '.card span.clickable', function(e){
-            var $this = $(this);
-            if(!$this.hasClass('collapsed')) {
-                $this.parents('.card').find('.card-block').slideUp();
-                $this.addClass('collapsed');
-                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-right');
-            } else {
-                $this.parents('.card').find('.card-block').slideDown();
-                $this.removeClass('collapsed');
-                $this.find('i').removeClass('fa-chevron-right').addClass('fa-chevron-down');
-            }
-        });
-    </script>
+    <script src="{{asset('js/menu.index.js')}}"></script>
 @endsection

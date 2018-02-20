@@ -14,4 +14,6 @@ class Controller extends BaseController
     {
         
     }
+
+    protected $data = array();
 }
