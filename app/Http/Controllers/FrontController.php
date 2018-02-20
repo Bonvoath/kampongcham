@@ -20,19 +20,19 @@ class FrontController extends Controller
     {
         return view('fronts.index');
     }
-    public function detail($id)
+    public function post($id)
     {
         $data['detail'] = DB::table('posts')->where('id', $id)->first();
 
         return view('fronts.detail', $data);
     }
-    public function about_kampongcham_detail($id)
+    public function page($id)
     {
         $data['detail'] = DB::table('about_kampongchams')->where('id', $id)->first();
 
         return view('fronts.about_kampongcham', $data);
     }
-    public function page_by_category($id)
+    public function category($id)
     {
         $data['posts'] = DB::table('posts')
             ->where('category_id', $id)

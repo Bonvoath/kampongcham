@@ -37,7 +37,7 @@
             $subs = DB::table('categories')->where('active',1)->where('parent_id', $cat->id)->get();
         ?>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('page-by-category/'.$cat->id)}}"> @if(count($subs)<=0){{$cat->name}} @endif</a>
+          <a class="nav-link" href="{{url('category/'.$cat->id)}}"> @if(count($subs)<=0){{$cat->name}} @endif</a>
           @if(count($subs)>0)
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -76,7 +76,7 @@
                     <div class="pd3">អំពីខេត្តកំពង់ចាម</div>
                     <div class="pd2">
                         @foreach($about_kampongchams as $b)
-                          <a style="text-decoration: none; color: #555;" href="{{url('about-kampongcham/detail/'.$b->id)}}">
+                          <a style="text-decoration: none; color: #555;" href="{{url('page/'.$b->id)}}">
                             <span class="text-danger"> 
                                 <b>></b> 
                             </span> {{$b->title}} <hr>

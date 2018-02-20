@@ -46,9 +46,9 @@ Route::get('/video-training/edit/{id}', "VideoTrainingController@edit");
 Route::post('/video-training/update', "VideoTrainingController@update");
 Route::get('/home', 'HomeController@index')->name('home');
 // detail page
-Route::get('/detail/{id}', 'FrontController@detail');
-Route::get('/about-kampongcham/detail/{id}', 'FrontController@about_kampongcham_detail');
-Route::get('/page-by-category/{id}', 'FrontController@page_by_category');
+Route::get('/post/{id}', 'FrontController@post');
+Route::get('/page/{id}', 'FrontController@page');
+Route::get('/category/{id}', 'FrontController@category');
 // user route
 Route::get('/user', "UserController@index");
 Route::get('/user/profile', "UserController@load_profile");
@@ -140,7 +140,6 @@ Route::get('/post/view/{id}', "PostController@view");
 // front page
 Route::get('/page/about', "FrontPageController@about");
 Route::get('/page/contact', "FrontPageController@contact");
-Route::get('/page/message-from-the-governor/{id}', "FrontPageController@message");
 // test
 Route::get('/test', "TestController@index");
 // product admin
