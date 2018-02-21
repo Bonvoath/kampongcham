@@ -21,7 +21,9 @@
                     <div class="form-group row">
                         <label for="title" class="control-label col-lg-6 col-sm-12">
                             <aside class="text-primary">Short Description</aside>
-                            <aside>{{$post->short_description}}</aside>
+                            <aside>{{$post->short_description}}</aside><br>
+                            <aside class="text-primary">Post Type</aside>
+                            <aside>{{$post->post_type}}</aside>
                         </label>
                         <div class="col-lg-6 col-sm-6">
                             <aside class="text-primary">Feature Image</aside>

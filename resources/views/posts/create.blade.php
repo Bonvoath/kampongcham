@@ -51,7 +51,7 @@
                                 </textarea>
                             </div>
                         </div>
-                    </form>
+                  
                 </div>
             </div>
         </div>
@@ -68,6 +68,20 @@
                         <div class="btn-group" role="group">
                             <button class="btn btn-danger" type="reset">Preview</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    Post Type
+                </div>
+                <div class="card-block">
+                    <div>
+                        <select class="form-control" name="post_type" id="post_type">
+                                <option value="page">post</option>
+                                <option value="page">page</option>
+                                 
+                        </select>
                     </div>
                 </div>
             </div>
@@ -98,6 +112,7 @@
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 @endsection

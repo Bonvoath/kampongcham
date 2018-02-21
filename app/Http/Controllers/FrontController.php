@@ -28,8 +28,8 @@ class FrontController extends Controller
     }
     public function page($id)
     {
-        $data['detail'] = DB::table('about_kampongchams')->where('id', $id)->first();
-
+        $data['detail'] = DB::table('posts')->where('id', $id)->first();
+        
         return view('fronts.about_kampongcham', $data);
     }
     public function category($id)

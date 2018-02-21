@@ -2,7 +2,7 @@
 @section('content')
      <div class="row">
 		<div class="col-md-9">
-			<?php $news = DB::table('posts')->orderBy('id', 'desc')->where('active',1)->paginate(2);?>
+			<?php $news = DB::table('posts')->orderBy('id', 'desc')->where('post_type', 'post')->where('active',1)->paginate(12);?>
 			<div class="c-news">
 				<span class="news font-KL">ព័ត៌មានថ្មីៗ</span>
 			</div>
@@ -24,7 +24,7 @@
 			<div class="row"><span>ទំព័រ:</span>{{$news->links()}}</div>
 	   </div>
 	   <div class="col-md-3">
-	   <?php $about_kampongchams = DB::table('about_kampongchams')->orderBy('id', 'desc')->where('active',1)->limit(20)->get();?>
+	   <?php $about_kampongchams = DB::table('posts')->orderBy('id', 'desc')->where('post_type','page')->where('active',1)->limit(20)->get();?>
 			<br>
 			<div class="pd3 font-KL">អំពីខេតកំពង់ចាម</div>
 			<div class="pd2">

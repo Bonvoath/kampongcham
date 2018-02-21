@@ -81,9 +81,6 @@
                         <a class="nav-link" href="{{url('/post')}}"><i class="fa fa-bullhorn"></i> Posts </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/page')}}"><i class="fa fa-columns"></i> Pages </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{url('/admin/menu')}}"><i class="fa fa-navicon"></i> Menus </a>
                     </li>
                     <li class="nav-item">

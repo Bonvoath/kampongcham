@@ -20,11 +20,13 @@ class MenuController extends Controller
             ->where('active', 1)
             ->get();
 
-        $this->data['pages'] = DB::table('pages')
+        $this->data['pages'] = DB::table('posts')
+            ->where('post_type', 'page')
             ->where('active', 1)
             ->get();
 
         $this->data['posts'] = DB::table('posts')
+            ->where('post_type', 'post')
             ->where('active', 1)
             ->get();
 

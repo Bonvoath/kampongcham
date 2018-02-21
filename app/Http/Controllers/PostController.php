@@ -44,6 +44,7 @@ class PostController extends Controller
             'short_description' => $r->short_description,
             'category_id' => $r->parent,
             'create_by' =>  Auth::user()->name,
+            'post_type' => $r->post_type,
             'description' => $r->description,
         );
         if($r->feature_image) {
@@ -71,12 +72,12 @@ class PostController extends Controller
         if ($i)
         {
             $r->session()->flash('sms', $sms);
-            return redirect('/post/create');
+            return redirect('/post/create/new');
         }
         else
         {
             $r->session()->flash('sms1', $sms1);
-            return redirect('/post/create')->withInput();
+            return redirect('/post/create/new')->withInput();
         }
     }
     // delete
@@ -104,15 +105,17 @@ class PostController extends Controller
             'title' => $r->title,
             'short_description' => $r->short_description,
             'category_id' => $r->parent,
+            'post_type' => $r->post_type,
             'modify_by' =>  Auth::user()->name,
             'description' => $r->description,
         );
         if($r->feature_image) {
             $file = $r->file('feature_image');
             $file_name = $file->getClientOriginalName();
-            //old upload 
-            // $destinationPath = 'img/';
-            // $file->move($destinationPath, $file_name);
+             // upload full image
+             $destinationPath = 'uploads/fulls/';
+             $new_img = Image::make($file->getRealPath());
+             $new_img->save($destinationPath . $file_name, 80);
 
             // upload 250
             $destinationPath = 'uploads/posts/250x250/';

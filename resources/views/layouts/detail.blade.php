@@ -45,7 +45,7 @@
               </a>
             <div class="dropdown-menu">
               @foreach($subs as $s)
-                <a class="dropdown-item" href="{{url('page-by-category/'.$s->id)}}">{{$s->name}} </a>
+                <a class="dropdown-item" href="{{url('category/'.$s->id)}}">{{$s->name}} </a>
               @endforeach
             </div>
           </li>
@@ -71,7 +71,7 @@
                     @yield('content')
                 </div>
                 <div class="col-md-3">
-                    <?php $about_kampongchams = DB::table('about_kampongchams')->orderBy('id', 'desc')->where('active',1)->limit(20)->get();?>
+                    <?php $about_kampongchams = DB::table('posts')->orderBy('id', 'desc')->where('post_type','page')->where('active',1)->limit(20)->get();?>
                     <br>
                     <div class="pd3">អំពីខេត្តកំពង់ចាម</div>
                     <div class="pd2">

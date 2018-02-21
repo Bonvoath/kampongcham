@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="card-header text-bold">
                     <i class="fa fa-align-justify"></i> Post List&nbsp;&nbsp;
-                    <a href="{{url('/post/create')}}" class="btn btn-link btn-sm">
+                    <a href="{{url('/post/create/new')}}" class="btn btn-link btn-sm">
                         New
                     </a>
                 </div>

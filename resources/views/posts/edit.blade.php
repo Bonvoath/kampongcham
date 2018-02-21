@@ -61,10 +61,19 @@
                     Public
                 </div>
                 <div class="card-block">
-                    <div>
-                        <button class="btn btn-primary" type="submit">Public</button>
-                        <button class="btn btn-danger" type="reset">Preview</button>
-                    </div>
+                    <button class="btn btn-primary" type="submit">Public</button>
+                    <button class="btn btn-danger" type="reset">Preview</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    Post Type
+                </div>
+                <div class="card-block">
+                    <select class="form-control" name="post_type" id="post_type">
+                        <option value="post"   {{"post" == $post->post_type?'selected':''}}>post</option>
+                        <option value="page"  {{"page" == $post->post_type?'selected':''}}>page</option>
+                    </select>
                 </div>
             </div>
             <div class="card">
@@ -72,13 +81,11 @@
                     Categories
                 </div>
                 <div class="card-block">
-                    <div>
-                        <select class="form-control" name="parent" id="parent">
-                            <?php foreach ($categories as $cat): ?>
-                                <option value="{{$cat->id}}"  {{$cat->id==$post->category_id?'selected':''}}> {{ $cat->name }}</option>
-                            <?php endforeach ?>                    
-                        </select>
-                    </div>
+                    <select class="form-control" name="parent" id="parent">
+                        <?php foreach ($categories as $cat): ?>
+                            <option value="{{$cat->id}}"  {{$cat->id==$post->category_id?'selected':''}}> {{ $cat->name }}</option>
+                        <?php endforeach ?>                    
+                    </select>
                 </div>
             </div>
             <div class="card">
@@ -86,12 +93,8 @@
                     Feature Image
                 </div>
                 <div class="card-block">
-                    <div>
-                        <input type="file" name="feature_image" id="feature_image" accept="image/*" class="form-control" onchange="loadFile(event)">
-                    </div>
-                    <div>
-                        <img src="{{asset('uploads/posts/250x250/'.$post->feature_image)}}" id="img" width="100%">
-                    </div>
+                    <input type="file" name="feature_image" id="feature_image" accept="image/*" class="form-control" onchange="loadFile(event)">
+                    <img src="{{asset('uploads/posts/250x250/'.$post->feature_image)}}" id="img" width="100%">
                 </div>
             </div>
         </div>
