@@ -87,6 +87,9 @@
                         <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i>Slide</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{url('/admin/filemanager')}}"><i class="fa fa-file"></i>File Manager</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{url('/governor-history')}}"><i class="fa fa-table"></i>Governor History</a>
                     </li>
                     <li class="nav-item nav-dropdown">

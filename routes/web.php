@@ -99,3 +99,5 @@ Route::get('/test', "TestController@index");
 // Menu
 Route::get('/admin/menu', 'MenuController@index');
 Route::get('/admin/menu/create', 'MenuController@create');
+// file manager
+Route::get('/admin/filemanager', "FileManagerController@index");
