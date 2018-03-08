@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'kh',
     'locales' => ['en' => 'English', 'kh' => 'ខ្មែរ'],
 
     /*
@@ -91,7 +91,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'kh',
 
     /*
     |--------------------------------------------------------------------------

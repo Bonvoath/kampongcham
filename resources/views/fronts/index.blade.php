@@ -27,7 +27,7 @@
 	   <div class="col-md-3">
 	   <?php $about_kampongchams = DB::table('posts')->orderBy('id', 'desc')->where('post_type','page')->where('active',1)->limit(20)->get();?>
 			<br>
-			<div class="pd3 font-KL">អំពីខេតកំពង់ចាម</div>
+			<div class="pd3 font-KL">អំពីខេត្តកំពង់ចាម</div>
 			<div class="pd2">
 				@foreach($about_kampongchams as $b)
 					<a style="text-decoration: none; color: #555;" href="{{url('page/'.$b->id)}}">

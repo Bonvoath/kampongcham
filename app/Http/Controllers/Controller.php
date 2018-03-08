@@ -15,5 +15,7 @@ class Controller extends BaseController
         
     }
 
-    protected $data = array();
+    protected $data = array(
+        'is_error' => true
+    );
 }

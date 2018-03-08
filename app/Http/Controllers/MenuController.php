@@ -51,7 +51,21 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = array(
+            'name' => $request->name,
+            'menu_type' => $request->menu_type,
+            'url' => $request->url,
+            'date_created' => date('Y-m-d H:i:s'),
+            'last_updated' => date('Y-m-d H:i:s')
+        );
+
+        $i = DB::table('menus')->insert($data);
+        if($i)
+        {
+            $this->data['is_error'] = false;
+        }
+        
+        return \Response::json($this->data);
     }
 
     /**

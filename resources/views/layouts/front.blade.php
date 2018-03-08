@@ -19,45 +19,18 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-          <?php  $categories = DB::table('categories as a')
-            ->leftjoin('categories as b','b.id','=','a.parent_id')
-            ->select('a.*', 'b.name as parent_name')
-            ->where('a.active',1)
-            ->where('a.parent_id', 0)
-            ->get();
-          ?>
+          <?php  $menus = DB::table('menus')->get(); ?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav font-KL">
             <li class="nav-item active">
               <a class="nav-link" href="{{url('/')}}">{{trans("labels.home")}}
               </a>
             </li>
-            @foreach($categories as $cat)
-            <?php
-                $subs = DB::table('categories')->where('active',1)->where('parent_id', $cat->id)->get();
-            ?>
+            @foreach($menus as $menu)
             <li class="nav-item">
-              <a class="nav-link" href="{{url('category/'.$cat->id)}}"> @if(count($subs)<=0){{$cat->name}} @endif</a>
-              @if(count($subs)>0)
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                   {{$cat->name}} 
-                  </a>
-                <div class="dropdown-menu">
-                  @foreach($subs as $s)
-                  <a class="dropdown-item" href="#">{{$s->name}} </a>
-                  @endforeach
-                </div>
-              </li>
-              @endif
+              <a class="nav-link" href="{{$menu->url}}">{{$menu->name}}</a>
             </li>
             @endforeach
-            
-          </ul>
-          <ul class="navbar-nav ml-auto">
-             <li class="nav-item">
-                <a style="color: #fff; font-family:Hanuman, serif !important;" href="#" onclick="chLang(event,'km')"> KH</a> <span style="color:#fff;">| </span>   <a style="font-family:Hanuman, serif !important; color: #fff;" href="#" onclick="chLang(event,'en')">EN</a>
-            </li>
           </ul>
         </div>
       </div>

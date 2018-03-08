@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Kampong Cham News">
     <meta name="author" content="vdoo.biz">
-    <meta name="keyword" content="School, Student, Student Management System, School Management System">
+    <meta name="keyword" content="Kampng Cham">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="shortcut icon" href="img/favicon.png">
 
     <title>Kampong Cham Web Admin</title>
