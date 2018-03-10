@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'KhKulen';
-    src: url('../fonts/Kh-Koulen.TTF') format('truetype');
+    src: url('../fonts/Kh-Koulen.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'KhContent';
-    src: url('../fonts/KhmerOS_content.TTF') format('truetype');
+    src: url('../fonts/KhmerOS_content.ttf') format('truetype');
 }
 
 body{

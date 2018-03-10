@@ -28,7 +28,7 @@
             </li>
             @foreach($menus as $menu)
             <li class="nav-item">
-              <a class="nav-link" href="{{$menu->url}}">{{$menu->name}}</a>
+              <a class="nav-link" href="{{asset($menu->url)}}">{{$menu->name}}</a>
             </li>
             @endforeach
           </ul>

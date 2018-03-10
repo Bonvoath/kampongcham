@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// back-end route
+Route::get('/post/{id}', 'FrontController@post');
+Route::get('/page/{id}', 'FrontController@page');
+Route::get('/category/{id}', 'FrontController@category');
+Route::get('/service', 'FrontPageController@service');
 
 Route::get('/admin',"HomeController@index");
 Route::get('/admin/dashboard',"HomeController@index");
@@ -39,10 +44,7 @@ Route::post('/slide/update', "SlideController@update");
 Route::get('/slide/delete/{id}', "SlideController@delete");
 
 Route::get('/home', 'HomeController@index')->name('home');
-// detail page
-Route::get('/post/{id}', 'FrontController@post');
-Route::get('/page/{id}', 'FrontController@page');
-Route::get('/category/{id}', 'FrontController@category');
+
 // user route
 Route::get('/user', "UserController@index");
 Route::get('/user/profile', "UserController@load_profile");
