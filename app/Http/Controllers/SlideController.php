@@ -91,7 +91,7 @@ class SlideController extends Controller
         if ($r->photo) {
             $file = $r->file('photo');
             $file_name = $file->getClientOriginalName();
-            $destinationPath = 'img/';
+            $destinationPath = 'uploads/slide/';
             $file->move($destinationPath, $file_name);
             $data['photo'] = $file_name;
         }

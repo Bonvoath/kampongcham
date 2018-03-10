@@ -48,11 +48,11 @@
                 @foreach($slides as $s)
                     @if($i == 1)
                     <div class="carousel-item  active">
-                        <div class="slider-img"> <img src="{{asset('img/'.$s->photo)}}" alt="{{$s->name}}" width="100%"></div>
+                        <div class="slider-img"> <img src="{{asset('uploads/slide/'.$s->photo)}}" alt="{{$s->name}}" width="100%"></div>
                     </div>
                     @else 
                     <div class="carousel-item ">
-                        <div class="slider-img "> <img src="{{asset('img/'.$s->photo)}}" alt="{{$s->name}}" width="100%"></div>
+                        <div class="slider-img "> <img src="{{asset('uploads/slide/'.$s->photo)}}" alt="{{$s->name}}" width="100%"></div>
                     </div>
                     @endif
                     <?php $i++;?>
@@ -69,11 +69,10 @@
             <div class="col-md-3">
               <div class="ad font-KL">សារលិខិតរបស់អភិបាល</div>
               <?php $gov = DB::table('governor_histories')->orderBy('id', 'desc')->limit(1)->get();?>
-              <div class="pd">
+              <div>
                 @foreach($gov as $g)
-                <a href="#"><img src="{{url('img/'.$g->photo)}}" width="100%"></a>
-                <aside align="center">{{$g->name}}</aside>
-                <aside align="center"> Start Date:{{$g->start_year}} - End Date {{$g->end_year}}</aside>
+                  <a href="#"><img src="{{url('uploads/govenor/'.$g->photo)}}" width="100%"></a>
+                  <aside align="center">{{$g->name}}</aside>
                 @endforeach
               </div>
             </div>

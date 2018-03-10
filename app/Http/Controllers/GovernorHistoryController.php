@@ -40,7 +40,7 @@ class GovernorHistoryController extends Controller
         if($r->photo) {
             $file = $r->file('photo');
             $file_name = $file->getClientOriginalName();
-            $destinationPath = 'img/';
+            $destinationPath = 'uploads/govenor/';
             $file->move($destinationPath, $file_name);
         }
         $data = array(
@@ -48,7 +48,9 @@ class GovernorHistoryController extends Controller
             'start_year' => $r->start_year,
             'end_year' => $r->end_year,
             'photo' => $file_name,
+            'active' => 1
         );
+
         $sms = "The new governor history has been created successfully.";
         $sms1 = "Fail to create the new governor history, please check again!";
         $i = DB::table('governor_histories')->insert($data);

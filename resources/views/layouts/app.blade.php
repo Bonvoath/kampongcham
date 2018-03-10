@@ -82,7 +82,7 @@
                         <a class="nav-link" href="{{url('/post')}}"><i class="fa fa-bullhorn"></i> Posts </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/admin/menu')}}"><i class="fa fa-navicon"></i> Menus </a>
+                        <a class="nav-link" href="{{url('/admin/menu')}}"><i class="fa fa-navicon"></i> មាតិការ </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i>Slide</a>
@@ -91,7 +91,7 @@
                         <a class="nav-link" href="{{url('/admin/filemanager')}}"><i class="fa fa-file"></i>File Manager</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/governor-history')}}"><i class="fa fa-table"></i>Governor History</a>
+                        <a class="nav-link" href="{{url('/governor-history')}}"><i class="fa fa-table"></i>អភិបាលខេត្ត</a>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
