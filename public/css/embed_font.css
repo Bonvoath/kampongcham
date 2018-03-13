@@ -8,6 +8,11 @@
     src: url('../fonts/KhmerOS_content.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'KhM1';
+    src: url('../fonts/KhmerM1.ttf') format('truetype');
+}
+
 body{
     font-family: KhContent;
 }
@@ -18,4 +23,8 @@ body{
 
 .font-KC{
     font-family: KhContent;
+}
+
+.font-M1{
+    font-family: KhM1;
 }

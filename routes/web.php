@@ -104,3 +104,6 @@ Route::get('/admin/menu/create', 'MenuController@create');
 Route::post('/admin/menu/store', "MenuController@store");
 // file manager
 Route::get('/admin/filemanager', "FileManagerController@index");
+
+// API
+Route::get('/api/get_service', 'FrontPageController@getService');
