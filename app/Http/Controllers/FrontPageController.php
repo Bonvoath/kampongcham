@@ -14,9 +14,23 @@ class FrontPageController extends Controller
         return view('fronts.service');
     }
 
+    public function service_price()
+    {
+        return view('fronts.service_price');
+    }
+
     public function getService(){
         $client = new Client();
-        $res = $client->get('http://203.223.44.122/owso/api/v1/service/type/get');
+        $res = $client->get($this->apiUrl('service/type/get'));
+
+        return $res->getBody();
+    }
+
+    public function getServicePrice()
+    {
+        $client = new Client();
+        $res = $client->get($this->apiUrl('service/price/get'));
+
         return $res->getBody();
     }
 }

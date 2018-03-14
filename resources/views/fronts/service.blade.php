@@ -9,8 +9,8 @@
                 <thead>
                     <tr>
                         <th class="text-center">ល.រ</th>
-                        <th>ប្រភេទសេវា</th>
                         <th>វិស័យ</th>
+                        <th style="width: 100px;"></th>
                     </tr>
                 </thead>
                 <tbody></tbody>
