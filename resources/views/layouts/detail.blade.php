@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+        function BUrl(path)
+        {
+          var base = "{{url('/')}}";
+
+          return base + path;
+        }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -19,83 +27,48 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <?php  $categories = DB::table('categories as a')
-        ->leftjoin('categories as b','b.id','=','a.parent_id')
-        ->select('a.*', 'b.name as parent_name')
-        ->where('a.active',1)
-        ->where('a.parent_id', 0)
-        ->paginate(18);
-      ?>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav font-KL">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{url('/')}}">ទំព័រដើម
-          </a>
-        </li>
-        @foreach($categories as $cat)
-        <?php
-            $subs = DB::table('categories')->where('active',1)->where('parent_id', $cat->id)->get();
-        ?>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url('category/'.$cat->id)}}"> @if(count($subs)<=0){{$cat->name}} @endif</a>
-          @if(count($subs)>0)
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-               {{$cat->name}} 
+        <?php  $menus = DB::table('menus')->get(); ?>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav font-KL">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url('/')}}">{{trans("labels.home")}}
               </a>
-            <div class="dropdown-menu">
-              @foreach($subs as $s)
-                <a class="dropdown-item" href="{{url('category/'.$s->id)}}">{{$s->name}} </a>
-              @endforeach
-            </div>
-          </li>
-          @endif
-        </li>
-        @endforeach
-        
-      </ul>
-          <ul class="navbar-nav ml-auto">
-             <li class="nav-item">
-             <a style="color: #fff; font-family:Hanuman, serif !important;" href="#"> KH</a> <span style="color:#fff;"> | </span>   <a style="font-family:Hanuman, serif !important; color: #fff;" href="#">EN</a>
             </li>
+            @foreach($menus as $menu)
+            <li class="nav-item">
+              <a class="nav-link" href="{{asset($menu->url)}}">{{$menu->name}}</a>
+            </li>
+            @endforeach
           </ul>
         </div>
-      </div>
     </nav>
 
     <!-- Page Content -->
-    <div class="container-fluit background">
-        <div class="container">
+    <div class="container-fluit">
+        <div class="container" style="margin-top: 10px;">
             <div class="row">
                 <div class="col-md-9">
                     @yield('content')
                 </div>
                 <div class="col-md-3">
-                    <?php $about_kampongchams = DB::table('posts')->orderBy('id', 'desc')->where('post_type','page')->where('active',1)->limit(20)->get();?>
-                    <br>
-                    <div class="pd3">អំពីខេត្តកំពង់ចាម</div>
-                    <div class="pd2">
-                        @foreach($about_kampongchams as $b)
-                          <a style="text-decoration: none; color: #555;" href="{{url('page/'.$b->id)}}">
-                            <span class="text-danger"> 
-                                <b>></b> 
-                            </span> {{$b->title}} <hr>
-                            </a>
-                        @endforeach
+                  <div class="ad font-KL">សារលិខិតរបស់អភិបាល</div>
+                    <?php $gov = DB::table('governor_histories')->orderBy('id', 'desc')->limit(1)->get();?>
+                    <div>
+                    @foreach($gov as $g)
+                      <a href="#"><img src="{{url('uploads/govenor/'.$g->photo)}}" width="100%" title="{{$g->name}}"></a>
+                    @endforeach
                     </div>
+                  </div>
                 </div>
             </div>
         </div>
         <br>
     </div>
-     <footer class="py-5 bg-dark">
-     <div class="container">
-       <p class="m-0 text-center text-white">Copyright &copy; រដ្ឋបាល ខេត្តកំពង់ចាម 2018</p>
-     </div>
-     <!-- /.container -->
-   </footer>
-
-   <!-- Bootstrap core JavaScript -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; រដ្ឋបាល ខេត្តកំពង់ចាម 2018</p>
+      </div>
+    </footer>
    <script src="{{asset('front/vendor/jquery/jquery.min.js')}}"></script>
    <script src="{{asset('front/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
    @yield('js')

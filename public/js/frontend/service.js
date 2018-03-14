@@ -35,7 +35,7 @@
         var result = '';
         $.each(data, function(index, item){
             result += '<tr><td class="text-center">' + (index + 1) + '</td><td>' + item.Name + '</td>'+
-                      '<td class="text-center"><a href="' + BUrl('/service/price') + '" class="btn btn-outline-primary btn-sm" target="_blank">មើលតំលៃសេវា</a></td>'+
+                      '<td class="text-center"><a href="' + BUrl('/service/price/' + item.Id) + '" class="btn btn-outline-primary btn-sm" target="_blank">មើលតំលៃសេវា</a></td>'+
                       '</tr>';
         });
 

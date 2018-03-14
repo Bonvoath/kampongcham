@@ -14,9 +14,11 @@ class FrontPageController extends Controller
         return view('fronts.service');
     }
 
-    public function service_price()
+    public function service_price($id)
     {
-        return view('fronts.service_price');
+        $data = array('id' => $id);
+
+        return view('fronts.service_price', $data);
     }
 
     public function getService(){
@@ -26,11 +28,13 @@ class FrontPageController extends Controller
         return $res->getBody();
     }
 
-    public function getServicePrice()
+    public function getServicePrice($id)
     {
         $client = new Client();
-        $res = $client->get($this->apiUrl('service/price/get'));
+        $res = $client->post($this->apiUrl('service/price/get'), [
+            'json' => ['ParentId' => $id]
+        ]);
 
-        return $res->getBody();
+        echo $res->getBody();
     }
 }

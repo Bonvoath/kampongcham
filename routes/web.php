@@ -15,12 +15,11 @@ Route::get('/post/{id}', 'FrontController@post');
 Route::get('/page/{id}', 'FrontController@page');
 Route::get('/category/{id}', 'FrontController@category');
 Route::get('/service', 'FrontPageController@service');
-Route::get('/service/price', 'FrontPageController@service_price');
+Route::get('/service/price/{id}', 'FrontPageController@service_price');
 
 Route::get('/admin',"HomeController@index");
 Route::get('/admin/dashboard',"HomeController@index");
 Route::get('/',"FrontController@index");
-
 
 Auth::routes();
 // Logo
@@ -108,4 +107,4 @@ Route::get('/admin/filemanager', "FileManagerController@index");
 
 // API
 Route::get('/api/get_service', 'FrontPageController@getService');
-Route::get('/api/get_service_price', 'FrontPageController@getServicePrice');
+Route::get('/api/get_service_price/{id}', 'FrontPageController@getServicePrice');
