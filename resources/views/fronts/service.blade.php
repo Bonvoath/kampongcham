@@ -10,7 +10,7 @@
                     <tr>
                         <th class="text-center">ល.រ</th>
                         <th>វិស័យ</th>
-                        <th style="width: 100px;"></th>
+                        <th class="text-center" style="width: 100px;">សកម្មភាព</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
