@@ -1,4 +1,4 @@
-@extends('layouts.detail')
+@extends('layouts.frontfull')
 @section('content')
     <input type="hidden" id="id" value="{{$id}}">
     <div class="card">
@@ -9,11 +9,11 @@
             <table id="ltable" class="table table-condensed table-hover" style="font-size: 11pt;">
                 <thead>
                     <tr>
-                        <th class="text-center">ល.រ</th>
-                        <th>ឈ្មោះសេវា</th>
-                        <th class="text-center">តំលៃ (រៀល)</th>
-                        <th class="text-center" style="width:95px;">រយះពេល (ថ្ងៃធ្វើការ)</th>
-                        <th>ឯកតា</th>
+                        <th class="text-center" style="vertical-align:middle;">ល.រ</th>
+                        <th style="vertical-align:middle;">ឈ្មោះសេវា</th>
+                        <th class="text-center" style="vertical-align:middle;">តំលៃ (រៀល)</th>
+                        <th class="text-center" style="width:95px; vertical-align:middle;">រយះពេល (ថ្ងៃធ្វើការ)</th>
+                        <th style="vertical-align:middle;">ឯកតា</th>
                     </tr>
                 </thead>
                 <tbody></tbody>

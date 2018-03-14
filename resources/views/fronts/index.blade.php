@@ -1,12 +1,11 @@
 @extends('layouts.front')
 @section('content')
      <div class="row">
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<?php $news = DB::table('posts')->orderBy('id', 'desc')->where('post_type', 'post')->where('active',1)->paginate(12);?>
 			<div class="c-news">
 				<span class="news font-KL">ព័ត៌មានថ្មីៗ</span>
 			</div>
-			
 			<div class="row" style="margin-top: 15px; background: #fff;">
 				@foreach($news as $n)
 				<div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
@@ -22,21 +21,12 @@
 				</div>
 				@endforeach
 			</div>
-			<div class="row"><span>ទំព័រ:</span>{{$news->links()}}</div>
-	   </div>
-	   <div class="col-md-3">
-	   <?php $about_kampongchams = DB::table('posts')->orderBy('id', 'desc')->where('post_type','page')->where('active',1)->limit(20)->get();?>
-			<br>
-			<div class="pd3 font-KL">អំពីខេត្តកំពង់ចាម</div>
-			<div class="pd2">
-				@foreach($about_kampongchams as $b)
-					<a style="text-decoration: none; color: #555;" href="{{url('page/'.$b->id)}}">
-					<span class="text-danger"> 
-					</span> {{$b->title}} <hr>
-					</a>
-				@endforeach
+			<div class="row">
+				<div class="col-md-12">
+					{{$news->links()}}
+				</div>
 			</div>
-		</div>
+	   </div>
     </div>
    </div>
 @endsection

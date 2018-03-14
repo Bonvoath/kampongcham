@@ -129,7 +129,7 @@ p {
     font-size: 13px;
 }
 .carousel {
-	padding: 5px;
+	padding: 1px;
 }
 .pagination .active >span {
 	background: #fff;

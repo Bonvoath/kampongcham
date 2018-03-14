@@ -42,31 +42,11 @@
           </ul>
         </div>
     </nav>
-    
-    <div class="container">
-        <div class="container" style="margin-top: 10px;">
-            <div class="row">
-                <div class="col-md-9">
-                    @yield('content')
-                </div>
-                <div class="col-md-3">
-                  <div class="ad font-KL">សារលិខិតរបស់អភិបាល</div>
-                    <?php $gov = DB::table('governor_histories')->orderBy('id', 'desc')->limit(1)->get();?>
-                    <div>
-                    @foreach($gov as $g)
-                      <a href="#"><img src="{{url('uploads/govenor/'.$g->photo)}}" width="100%" title="{{$g->name}}"></a>
-                    @endforeach
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <br>
+    <div class="container" style="padding: 10px 0;">
+      @yield('content')
     </div>
     <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; រដ្ឋបាល ខេត្តកំពង់ចាម 2018</p>
-      </div>
+      <p class="m-0 text-center text-white">Copyright &copy; រដ្ឋបាល ខេត្តកំពង់ចាម 2018</p>
     </footer>
    <script src="{{asset('front/vendor/jquery/jquery.min.js')}}"></script>
    <script src="{{asset('front/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
