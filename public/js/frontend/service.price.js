@@ -14,10 +14,9 @@
     {
         $.ajax({
             type: 'GET',
-            url: BUrl('/api/get_service_price/'+$('#id').val()),
+            url: BUrl('/api/get_service_price/'+$('#id').val())
         }).done(function(res){
             var json = JSON.parse(res);
-            console.log(json);
             callback(json.Data);
         });
     }

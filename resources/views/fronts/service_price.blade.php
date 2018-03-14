@@ -10,7 +10,7 @@
                 <thead>
                     <tr>
                         <th class="text-center">ល.រ</th>
-                        <th>ឈ្មោះ</th>
+                        <th>ឈ្មោះសេវា</th>
                         <th class="text-center">តំលៃ (រៀល)</th>
                         <th class="text-center" style="width:95px;">រយះពេល (ថ្ងៃធ្វើការ)</th>
                         <th>ឯកតា</th>
