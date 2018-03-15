@@ -91,7 +91,6 @@ p {
     padding: 5px;
     width: 100%;
     color: #fff;
-    text-align: center;
     background: #CA0002;
     font-size: 18px;
 }
@@ -131,7 +130,15 @@ p {
 .carousel {
 	padding: 1px;
 }
-.pagination .active >span {
+
+.carousel-indicators li{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 10px !important;
+    cursor: pointer;
+}
+
+.pagination .active>span {
 	background: #fff;
 	padding: 3px 6px;
 }

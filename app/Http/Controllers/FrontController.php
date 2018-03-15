@@ -18,7 +18,13 @@ class FrontController extends Controller
     // index
     public function index()
     {
-        return view('fronts.index');
+        $data['posts'] = DB::table('posts')
+                        ->orderBy('id', 'desc')
+                        ->where('post_type', 'post')
+                        ->where('active', 1)
+                        ->paginate(25);
+
+        return view('fronts.index', $data);
     }
     public function post($id)
     {
@@ -42,6 +48,7 @@ class FrontController extends Controller
             ->where('id',$id)
             ->where('active',1)
             ->first();
+
         return view('fronts.page_by_categories', $data);
     }
 }
