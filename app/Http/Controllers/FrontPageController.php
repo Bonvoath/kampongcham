@@ -21,6 +21,26 @@ class FrontPageController extends Controller
         return view('fronts.service_price', $data);
     }
 
+    public function resource_document()
+    {
+        return view('fronts.resource_document');
+    }
+
+    public function turist_investment()
+    {
+        return view('fronts.turist_investment');
+    }
+
+    public function announcement()
+    {
+        return view('fronts.announcement');
+    }
+
+    public function contact()
+    {
+        return view('fronts.contact');
+    }
+
     public function getService(){
         $client = new Client();
         $res = $client->get($this->apiUrl('service/type/get'));

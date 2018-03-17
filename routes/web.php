@@ -16,6 +16,10 @@ Route::get('/page/{id}', 'FrontController@page');
 Route::get('/category/{id}', 'FrontController@category');
 Route::get('/service', 'FrontPageController@service');
 Route::get('/service/price/{id}', 'FrontPageController@service_price');
+Route::get('/resdoc', 'FrontPageController@resource_document');
+Route::get('/tsinv', 'FrontPageController@turist_investment');
+Route::get('/announcement', 'FrontPageController@announcement');
+Route::get('/contact', 'FrontPageController@contact');
 
 Route::get('/admin',"HomeController@index");
 Route::get('/admin/dashboard',"HomeController@index");

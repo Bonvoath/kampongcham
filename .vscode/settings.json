@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 16,
+    "emmet.includeLanguages": {
+        "php": "html",
+        "*.php": "html",
+        "blade": "html",
+        "*.blade.php": "html"
+    },
+}
