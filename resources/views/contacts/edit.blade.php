@@ -1,0 +1,75 @@
+@extends('layouts.app')
+@section('content')
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header text-bold">
+                    <i class="fa fa-align-justify"></i> Edit Contact&nbsp;&nbsp;
+                    <a href="{{url('/admin/contact')}}" class="btn btn-link btn-sm">Back To List</a>
+                </div>
+                <div class="card-block">
+                    @if(Session::has('sms'))
+                        <div class="alert alert-success" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div>
+                                {{session('sms')}}
+                            </div>
+                        </div>
+                    @endif
+                    @if(Session::has('sms1'))
+                        <div class="alert alert-danger" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div>
+                                {{session('sms1')}}
+                            </div>
+                        </div>
+                    @endif
+                    <form action="{{url('/admin/contact/update')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+                        {{csrf_field()}}
+                        <input type="hidden" name="id" id="id" value="{{$contact->id}}">
+                        <div class="form-group row">
+                            <label for="contact_type" class="control-label col-lg-2 col-sm-2">ប្រភេទនៃទំនាក់ទំនង <span class="text-danger">*</span></label>
+                            <div class="col-lg-6 col-sm-8">           
+                                <select class="form-control" name="contact_type" id="contact_type">
+                                    <?php foreach ($contact_types as $con): ?>
+                                        <option value="{{$con->id}}" {{$contact->contact_type_id==$con->id? 'selected':''}}>{{ $con->name }}</option>
+                                    <?php endforeach ?>                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="name" class="control-label col-lg-2 col-sm-2">ឈ្មោះ <span class="text-danger">*</span></label>
+                            <div class="col-lg-6 col-sm-8">
+                                <input type="text" required autofocus value="{{$contact->name}}" name="name" id="name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="phone" class="control-label col-lg-2 col-sm-2">លេខទូរស័ព្ទ</label>
+                            <div class="col-lg-6 col-sm-8">
+                                <input type="text" name="phone" id="phone" value="{{$contact->phone}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="control-label col-lg-2 col-sm-2">អ៊ីមែល</label>
+                            <div class="col-lg-6 col-sm-8">
+                                <input type="email" name="email" id="email" value="{{$contact->email}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-lg-2 col-sm-2">&nbsp;</label>
+                            <div class="col-lg-6 col-sm-8">
+                                <button class="btn btn-primary" type="submit">Save</button>
+                                <button class="btn btn-danger" type="reset">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+    </div>
+@endsection

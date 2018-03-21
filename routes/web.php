@@ -84,9 +84,20 @@ Route::get('/category/edit/{id}', "CategoryController@edit");
 Route::get('/category/delete/{id}', "CategoryController@delete");
 Route::post('/category/save', "CategoryController@save");
 Route::post('/category/update', "CategoryController@update");
-
-
-
+// Admin Contact
+Route::get('/admin/contact', "AdminContactController@index");
+Route::get('/admin/contact/create', "AdminContactController@create");
+Route::get('/admin/contact/edit/{id}', "AdminContactController@edit");
+Route::get('/admin/contact/delete/{id}', "AdminContactController@delete");
+Route::post('/admin/contact/save', "AdminContactController@save");
+Route::post('/admin/contact/update', "AdminContactController@update");
+// Admin Contact
+Route::get('/contact/type', "ContactTypeController@index");
+Route::get('/contact/type/create', "ContactTypeController@create");
+Route::get('/contact/type/edit/{id}', "ContactTypeController@edit");
+Route::get('/contact/type/delete/{id}', "ContactTypeController@delete");
+Route::post('/contact/type/save', "ContactTypeController@save");
+Route::post('/contact/type/update', "ContactTypeController@update");
 // Post
 Route::get('/post', "PostController@index");
 Route::get('/post/create', "PostController@create");

@@ -93,6 +93,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/governor-history')}}"><i class="fa fa-table"></i>អភិបាលខេត្ត</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/admin/contact')}}"><i class="fa fa-phone"></i>ទំនាក់ទំនង</a>
+                    </li>
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
                             <i class="fa fa-key text-danger"></i> {{$lb_security}}</a>
@@ -112,11 +115,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{url('/category')}}"><i class="fa fa-tags"></i>Category</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="{{url('/logo')}}">
-                                    <i class="fa fa-bullseye"></i>Banner
-                                </a>
-                            </li> -->
+                        </ul>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url('/contact/type')}}"><i class="fa fa-tags"></i>ប្រភេទទំនាក់ទំនង</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
