@@ -13,15 +13,10 @@
     <meta name="keyword" content="Kampng Cham">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="shortcut icon" href="img/favicon.png">
-
     <title>Kampong Cham Web Admin</title>
-     <!-- Chosen  -->
     <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
-    <!-- Icons -->
     <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
     <link href="{{asset('css/simple-line-icons.css')}}" rel="stylesheet">
-
-    <!-- Main styles for this application -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 	<link href="{{asset('css/embed_font.css')}}" rel="stylesheet">
@@ -76,19 +71,19 @@
             <nav class="sidebar-nav">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/admin/dashboard')}}"><i class="fa fa-tachometer text-primary"></i> {{$lb_dashboard}} </a>
+                        <a class="nav-link" href="{{url('/admin/dashboard')}}"><i class="fa fa-tachometer text-primary"></i> ទំព័ររមុខ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/post')}}"><i class="fa fa-bullhorn"></i> Posts </a>
+                        <a class="nav-link" href="{{url('/post')}}"><i class="fa fa-bullhorn"></i> អត្ថបទ </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/admin/menu')}}"><i class="fa fa-navicon"></i> មាតិការ </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i>Slide</a>
+                        <a class="nav-link" href="{{url('/slide')}}"><i class="fa fa-picture-o"></i> ស្លាយ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/admin/filemanager')}}"><i class="fa fa-file"></i>File Manager</a>
+                        <a class="nav-link" href="{{url('/admin/filemanager')}}"><i class="fa fa-file"></i> កំរងរូបភាព</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/governor-history')}}"><i class="fa fa-table"></i>អភិបាលខេត្ត</a>
@@ -98,22 +93,22 @@
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="fa fa-key text-danger"></i> {{$lb_security}}</a>
+                            <i class="fa fa-key text-danger"></i> ប្រព័ន្ធសុវត្តភាព</a>
                             <ul class="nav-dropdown-items">
                                 <li class="nav-item">
-                                    <a href="{{url('/user')}}" class="nav-link"><i class="fa fa-user text-yellow"></i> {{$lb_user}}</a>
+                                    <a href="{{url('/user')}}" class="nav-link"><i class="fa fa-user text-yellow"></i> គណនីប្រើប្រាស់</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{url('/role')}}" class="nav-link"><i class="fa fa-shield text-info"></i> {{$lb_role}}</a>
+                                    <a href="{{url('/role')}}" class="nav-link"><i class="fa fa-shield text-info"></i> កាកំណត់សិទ្ធ</a>
                                 </li>
                             </ul>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a class="nav-link nav-dropdown-toggle" href="#">
-                            <i class="fa fa-cog text-success"></i> {{$lb_setting}}</a>
+                            <i class="fa fa-cog text-success"></i> កំណត់ត្រាផ្សេងៗ</a>
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('/category')}}"><i class="fa fa-tags"></i>Category</a>
+                                <a class="nav-link" href="{{url('/category')}}"><i class="fa fa-tags"></i>ប្រភេទអត្ថបទ</a>
                             </li>
                         </ul>
                         <ul class="nav-dropdown-items">

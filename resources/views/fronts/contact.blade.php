@@ -1,41 +1,65 @@
 @extends('layouts.frontfull')
 @section('content')
-    <div class="c-news"><span class="news font-KL">ទំនាក់ទំនង</span></div>
     <div class="container">
         <div class="row">
-            <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>ល.រ</th>
-                    <th>ប្រភេទនៃទំនាក់ទំនង</th>
-                    <th>ឈ្មោះ</th>
-                    <th>លេខទូរស័ព្ទ</th>
-                    <th>អីុម៉ែល</th>
-                </tr>
-            </thead>
-            <?php 
-                $contacts = DB::table('contacts')
-                    ->join('contact_types', 'contact_types.id', '=','contacts.id')
-                    ->select('contacts.*','contact_types.name as contact_type_id')
-                    ->orderBy('contacts.id', 'desc')
-                    ->where('contacts.active',1)
-                    ->get(); 
-                $i = 1;
-            ?>
-            <tbody>
-                @foreach($contacts as $con)
-                    <tr>
-                        <td>{{$i++}}</td>
-                        <td>{{$con->contact_type_id}}</td>
-                        <td>{{$con->name}}</td>
-                        <td>{{$con->phone}}</td>
-                        <td>{{$con->email}}</td>
-                    </tr>        
-                @endforeach
-            </tbody>
-        </table>
+            <div class="col-sm-3">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <?php $index = 1; $tab_index = 1; $show = ''; ?>
+                    @foreach($contacttypes as $ctype)
+                        @if($index == 1)
+                            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="#list-{{$ctype->id}}" role="tab" aria-controls="{{$ctype->name}}" aria-selected="false">{{$ctype->name}}</a>
+                        @else
+                            <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="tab" href="#list-{{$ctype->id}}" role="tab" aria-controls="{{$ctype->name}}" aria-selected="false">{{$ctype->name}}</a>
+                        @endif
+                        <?php $index++; ?>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="tab-content" id="nav-tabContent">
+                    @foreach($contacttypes as $ctype)
+                        <?php
+                            if($tab_index == 1)
+                            $show='active show';
+                            else
+                            $show='';
+
+                            $contacts = DB::table('contacts')
+                                        ->where('active',1)
+                                        ->where('contact_type_id', $ctype->id)
+                                        ->get();
+                        ?>
+                        <div class="tab-pane fade {{$show}}" id="list-{{$ctype->id}}" role="tabpanel" aria-labelledby="list-home-list">
+                            <div class="card">
+                                <div class="card-header font-M1"><i class="fa fa-envelope-o" aria-hidden="true"></i> ទំនាក់ទំនង {{$ctype->name}}</div>
+                                <div class="card-body" style="padding: 0; min-height: 350px;">
+                                    <table class="table table-condensed" style="margin-bottom: 0;">
+                                        <thead>
+                                            <tr>
+                                                <th>ឈ្មោះ</th>
+                                                <th>លេខទូរស័ព្ទ</th>
+                                                <th>អីុម៉ែល</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($contacts as $con)
+                                                <tr>
+                                                    <td>{{$con->name}}</td>
+                                                    <td>{{$con->phone}}</td>
+                                                    <td>{{$con->email}}</td>
+                                                </tr>        
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    <?php $tab_index++; ?>
+                    @endforeach
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 @endsection
 @section('js')
 

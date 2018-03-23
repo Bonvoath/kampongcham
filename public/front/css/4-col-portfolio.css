@@ -193,3 +193,13 @@ p {
 	background-color: #cb0003;
 	color: #fff;
 }
+
+.list-group-item{
+    border-radius: 0 !important;
+    margin-bottom: 5px;
+}
+
+.list-group-item.active{
+    background: #B60002 !important;
+    border:none;
+}

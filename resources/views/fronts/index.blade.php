@@ -5,7 +5,7 @@
 		@foreach($posts as $post)
 			<div class="col-lg-4 col-md-4 col-sm-4 portfolio-item">
 				<div class="card h-100">
-					<a href="{{url('post/'.$n->id)}}"><img class="card-img-top" src="{{asset('uploads/posts/250x250/'.$post->feature_image)}}" alt="feature image" width="100%"></a>
+					<a href="{{url('post/'.$post->id)}}"><img class="card-img-top" src="{{asset('uploads/posts/250x250/'.$post->feature_image)}}" alt="feature image" width="100%"></a>
 					<div class="card-body">
 						<aside class="card-text"><a style="text-decoration: none; color: #555;" href="{{url('post/'.$post->id)}}">{{$post->title}}</a></aside>
 					</div>

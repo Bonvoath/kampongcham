@@ -38,7 +38,9 @@ class FrontPageController extends Controller
 
     public function contact()
     {
-        return view('fronts.contact');
+        $data['contacttypes'] = DB::table('contact_types')->get();
+
+        return view('fronts.contact', $data);
     }
 
     public function getService(){
