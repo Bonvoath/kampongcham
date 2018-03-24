@@ -4,8 +4,8 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> New Category&nbsp;&nbsp;
-                    <a href="{{url('/category')}}" class="btn btn-link btn-sm">Back To List</a>
+                    <i class="fa fa-align-justify"></i> កែប្រែប្រភេទអត្ថបទ
+                    <a href="{{url('/admin/category')}}" class="btn btn-link btn-sm">ត្រលប់ក្រោយ</a>
                 </div>
                 <div class="card-block">
                     @if(Session::has('sms'))
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                     @endif
-                    <form action="{{url('/category/update')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+                    <form action="{{url('/admin/category/update')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <input type="hidden" name="id" value="{{$categories->id}}">
                         <div class="form-group row">
@@ -53,7 +53,7 @@
                         <div class="form-group row">
                             <label class="control-label col-lg-1 col-sm-2">&nbsp;</label>
                             <div class="col-lg-6 col-sm-8">
-                                <button class="btn btn-primary" type="submit">Save Change</button>
+                                <button class="btn btn-primary" type="submit">រក្សាទុក</button>
                             </div>
                         </div>
                     </form>

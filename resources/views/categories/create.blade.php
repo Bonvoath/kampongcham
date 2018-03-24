@@ -4,8 +4,8 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> New Category&nbsp;&nbsp;
-                    <a href="{{url('/category')}}" class="btn btn-link btn-sm">Back To List</a>
+                    <i class="fa fa-align-justify"></i> បញ្ចូលប្រភេទអត្ថបទថ្មី
+                    <a href="{{url('/admin/category')}}" class="btn btn-link btn-sm">ត្រលប់ក្រោយ</a>
                 </div>
                 <div class="card-block">
                     @if(Session::has('sms'))
@@ -28,18 +28,18 @@
                             </div>
                         </div>
                     @endif
-                    <form action="{{url('/category/save')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+                    <form action="{{url('/admin/category/save')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group row">
-                            <label for="name" class="control-label col-lg-1 col-sm-2">Name <span class="text-danger">*</span></label>
+                            <label for="name" class="control-label col-lg-1 col-sm-2">ប្រភេទ <span class="text-danger">*</span></label>
                             <div class="col-lg-6 col-sm-8">
                                 <input type="text" required autofocus name="name" id="name" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="parent" class="control-label col-lg-1 col-sm-2">Parent</label>
+                            <label for="parent" class="control-label col-lg-1 col-sm-2">នៅក្រោម</label>
                             <div class="col-lg-6 col-sm-8">           
-                                <select class="form-control" name="parent" id="parent"  id="parent">
+                                <select class="form-control" name="parent" id="parent">
                                     <option value="0"> </option>
                                     @<?php foreach ($categories as $cat): ?>
                                         <option value="{{$cat->id}}">{{ $cat->name }}</option>
@@ -50,8 +50,8 @@
                         <div class="form-group row">
                             <label class="control-label col-lg-1 col-sm-2">&nbsp;</label>
                             <div class="col-lg-6 col-sm-8">
-                                <button class="btn btn-primary" type="submit">Save</button>
-                                <button class="btn btn-danger" type="reset">Cancel</button>
+                                <button class="btn btn-primary" type="submit">រក្សាទុក</button>
+                                <button class="btn btn-danger" type="reset">សំអាត</button>
                             </div>
                         </div>
                     </form>

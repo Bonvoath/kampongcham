@@ -108,7 +108,7 @@
                             <i class="fa fa-cog text-success"></i> កំណត់ត្រាផ្សេងៗ</a>
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('/category')}}"><i class="fa fa-tags"></i>ប្រភេទអត្ថបទ</a>
+                                <a class="nav-link" href="{{url('/admin/category')}}"><i class="fa fa-tags"></i>ប្រភេទអត្ថបទ</a>
                             </li>
                         </ul>
                         <ul class="nav-dropdown-items">
