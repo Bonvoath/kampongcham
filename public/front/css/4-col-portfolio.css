@@ -39,7 +39,7 @@ p {
 }
 .detail {
 	background: #fff;
-	padding: 25px;
+	padding: 25px 0;
 }
 .page-by-cat {
 	background: #fff;
@@ -202,4 +202,9 @@ p {
 .list-group-item.active{
     background: #B60002 !important;
     border:none;
+}
+
+.post_content{
+    line-height: 24px;
+    font-size: 14px !important;
 }

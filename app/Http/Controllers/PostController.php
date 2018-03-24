@@ -38,7 +38,6 @@ class PostController extends Controller
     // save new page
     public function save(Request $r)
     {
-       
         $data = array(
             'title' => $r->title,
             'short_description' => $r->short_description,
@@ -52,7 +51,7 @@ class PostController extends Controller
             $file_name = $file->getClientOriginalName();
 
             // upload full image
-            $destinationPath = 'uploads/fulls/';
+            $destinationPath = 'uploads/posts/';
             $new_img = Image::make($file->getRealPath());
             $new_img->save($destinationPath . $file_name, 80);
 
@@ -113,7 +112,7 @@ class PostController extends Controller
             $file = $r->file('feature_image');
             $file_name = $file->getClientOriginalName();
              // upload full image
-             $destinationPath = 'uploads/fulls/';
+             $destinationPath = 'uploads/posts/';
              $new_img = Image::make($file->getRealPath());
              $new_img->save($destinationPath . $file_name, 80);
 
