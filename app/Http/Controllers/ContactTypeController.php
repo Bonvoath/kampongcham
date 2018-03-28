@@ -30,7 +30,7 @@ class ContactTypeController extends Controller
     // load create form
     public function create()
     {
-        $data['contact_types'] = DB::table('contact_types')->where('active',1)->get();
+        $data['contact_types'] = DB::table('contact_types')->where('active', 1)->get();
         return view('contact-types.create', $data);
     }
     // save new page
@@ -38,6 +38,7 @@ class ContactTypeController extends Controller
     {
         $data = array(
             'name' => $r->name,
+            'use_job' => ($r->use_job == NULL?0:1)
         );
         $sms = "The new contact type has been created successfully.";
         $sms1 = "Fail to create the new contact type, please check again!";
@@ -63,7 +64,7 @@ class ContactTypeController extends Controller
     public function edit($id)
     {
         $data['contact_type'] = DB::table('contact_types')
-            ->where('id',$id)->first();
+            ->where('id', $id)->first();
         return view('contact-types.edit', $data);
     }
 
@@ -71,6 +72,7 @@ class ContactTypeController extends Controller
     {
         $data = array(
             'name' => $r->name,
+            'use_job' => ($r->use_job == NULL?0:1)
         );
         $sms = "All changes have been saved successfully.";
         $sms1 = "Fail to to save changes, please check again!";
