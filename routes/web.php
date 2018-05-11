@@ -123,3 +123,6 @@ Route::get('/admin/filemanager', "FileManagerController@index");
 // API
 Route::get('/api/get_service', 'FrontPageController@getService');
 Route::get('/api/get_service_price/{id}', 'FrontPageController@getServicePrice');
+
+// Route for mobile view.
+Route::get('/mobile/post/{id}', 'MobileController@detail');
