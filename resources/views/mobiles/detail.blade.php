@@ -1,7 +1,7 @@
 @extends('layouts.mobile')
 @section('content')
     <div>
-        <h4 style="line-height:37px;">{{$detail->title}}</h4><br>
+        <div style="font-size: 16px; font-weight: 600; line-height:24px;">{{$detail->title}}</div>
         <small style="color: gray;"><img src="{{asset('front/img/date.png')}}" alt="date">  : {{$detail->create_at}}</small>
         <hr>
         <div id="box_content">
