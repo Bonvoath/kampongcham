@@ -78,12 +78,12 @@ Route::get('/role/permission/{id}', "PermissionController@index");
 Route::post('/rolepermission/save', "PermissionController@save");
 
 // catogory
-Route::get('/category', "CategoryController@index");
-Route::get('/category/create', "CategoryController@create");
-Route::get('/category/edit/{id}', "CategoryController@edit");
-Route::get('/category/delete/{id}', "CategoryController@delete");
-Route::post('/category/save', "CategoryController@save");
-Route::post('/category/update', "CategoryController@update");
+Route::get('/admin/category', "CategoryController@index");
+Route::get('/admin/category/create', "CategoryController@create");
+Route::get('/admin/category/edit/{id}', "CategoryController@edit");
+Route::get('/admin/category/delete/{id}', "CategoryController@delete");
+Route::post('/admin/category/save', "CategoryController@save");
+Route::post('/admin/category/update', "CategoryController@update");
 // Admin Contact
 Route::get('/admin/contact', "AdminContactController@index");
 Route::get('/admin/contact/create', "AdminContactController@create");

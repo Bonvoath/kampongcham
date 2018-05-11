@@ -37,6 +37,9 @@
                                         <thead>
                                             <tr>
                                                 <th>ឈ្មោះ</th>
+                                                @if($ctype->use_job==true)
+                                                <th>មុខតំណែង</th>
+                                                @endif
                                                 <th>លេខទូរស័ព្ទ</th>
                                                 <th>អីុម៉ែល</th>
                                             </tr>
@@ -45,6 +48,9 @@
                                             @foreach($contacts as $con)
                                                 <tr>
                                                     <td>{{$con->name}}</td>
+                                                    @if($ctype->use_job==true)
+                                                    <td>{{$con->job}}</td>
+                                                    @endif
                                                     <td>{{$con->phone}}</td>
                                                     <td>{{$con->email}}</td>
                                                 </tr>        

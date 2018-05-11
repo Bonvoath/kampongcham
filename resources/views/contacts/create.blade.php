@@ -4,8 +4,8 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <i class="fa fa-align-justify"></i> New Contact&nbsp;&nbsp;
-                    <a href="{{url('/admin/contact')}}" class="btn btn-link btn-sm">Back To List</a>
+                    <i class="fa fa-align-justify"></i> លេខទំនាក់ទំនងថ្មី
+                    <a href="{{url('/admin/contact')}}" class="btn btn-link btn-sm">ត្រលប់ក្រោយ</a>
                 </div>
                 <div class="card-block">
                     @if(Session::has('sms'))
@@ -47,6 +47,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="name" class="control-label col-lg-2 col-sm-2">មុខតំណែង</label>
+                            <div class="col-lg-6 col-sm-8">
+                                <input type="text" name="job" id="job" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="phone" class="control-label col-lg-2 col-sm-2">លេខទូរស័ព្ទ</label>
                             <div class="col-lg-6 col-sm-8">
                                 <input type="text" name="phone" id="phone" class="form-control">
@@ -61,8 +67,8 @@
                         <div class="form-group row">
                             <label class="control-label col-lg-2 col-sm-2">&nbsp;</label>
                             <div class="col-lg-6 col-sm-8">
-                                <button class="btn btn-primary" type="submit">Save</button>
-                                <button class="btn btn-danger" type="reset">Cancel</button>
+                                <button class="btn btn-primary" type="submit">រក្សាទុក</button>
+                                <button class="btn btn-danger" type="reset">សំអាត</button>
                             </div>
                         </div>
                     </form>

@@ -32,7 +32,8 @@ class AdminContactController extends Controller
     // load create form
     public function create()
     {
-        $data['contact_types'] = DB::table('contact_types')->where('active',1)->get();
+        $data['contact_types'] = DB::table('contact_types')->where('active', 1)->get();
+
         return view('contacts.create', $data);
     }
     // save new page
@@ -41,6 +42,7 @@ class AdminContactController extends Controller
         $data = array(
             'name' => $r->name,
             'contact_type_id' => $r->contact_type,
+            'job' => $r->job,
             'phone' => $r->phone,
             'email' => $r->email,
         );
@@ -62,6 +64,7 @@ class AdminContactController extends Controller
     public function delete($id)
     {
         DB::table('contacts')->where('id', $id)->update(['active'=>0]);
+
         return redirect('/admin/contact');
     }
 
@@ -79,6 +82,7 @@ class AdminContactController extends Controller
         $data = array(
             'name' => $r->name,
             'contact_type_id' => $r->contact_type,
+            'job' => $r->job,
             'phone' => $r->phone,
             'email' => $r->email,
         );

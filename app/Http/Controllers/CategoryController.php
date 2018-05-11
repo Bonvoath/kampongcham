@@ -19,6 +19,7 @@ class CategoryController extends Controller
             ->select('a.*', 'b.name as parent_name')
             ->where('a.active',1)
             ->paginate(18);
+
         return view('categories.index', $data);
     }
     // load create form
@@ -52,12 +53,12 @@ class CategoryController extends Controller
                 DB::table('categories')->where('id', $i)->update(['icon'=>$file_name]);
             }
             $r->session()->flash('sms', $sms);
-            return redirect('/category/create');
+            return redirect('/admin/category/create');
         }
         else
         {
             $r->session()->flash('sms1', $sms1);
-            return redirect('/category/create')->withInput();
+            return redirect('/admin/category/create')->withInput();
         }
     }
     // delete
@@ -65,7 +66,7 @@ class CategoryController extends Controller
     {
 
         DB::table('categories')->where('id', $id)->update(['active'=>0]);
-        return redirect('/category');
+        return redirect('/admin/category');
     }
 
     public function edit($id)
@@ -102,12 +103,12 @@ class CategoryController extends Controller
         if ($i)
         {
             $r->session()->flash('sms', $sms);
-            return redirect('/category/edit/'.$r->id);
+            return redirect('/admin/category/edit/'.$r->id);
         }
         else
         {
             $r->session()->flash('sms1', $sms1);
-            return redirect('/category/edit/'.$r->id);
+            return redirect('/admin/category/edit/'.$r->id);
         }
     }
 }
