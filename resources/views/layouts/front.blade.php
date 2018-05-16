@@ -79,6 +79,18 @@
                     <div>
                         <div class="ad font-KL"><i class="fa fa-volume-up" aria-hidden="true"></i> សំលេងប្រជាពលរដ្ឋ</div>
                     </div>
+                    <div>
+                        <div class="ad font-KL" style="margin-bottom:3px;"><i class="fa fa-upload" aria-hidden="true"></i> ទាញយកកម្មវិធីខេត្តកំពង់ចាម</div>
+                        <div class="row">
+                            <div class="col-xs-7 col-sm-7 col-md-7">
+                                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.kravanh.app.AppKampongcham&h=ATMo-mIWGWjjqUG0YfPnvMAsDQ7bMA6vndzB0ilRXyB6XV7u_eb6A5n9ijU9XE7imjiIT3iSA7oR_0M3vSgPdJ8pS7IkCaQ9VCnvscZalEm4Y43IZf6-ww" style="line-height: 50px;"><img src="{{url('img/google.png')}}" width="100%"></a>
+                                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fitunes.apple.com%2Fcn%2Fapp%2Fkampongcham-administration%2Fid1376449951%3Fmt%3D8%26ign-mpt%3Duo%253D4&h=ATMo-mIWGWjjqUG0YfPnvMAsDQ7bMA6vndzB0ilRXyB6XV7u_eb6A5n9ijU9XE7imjiIT3iSA7oR_0M3vSgPdJ8pS7IkCaQ9VCnvscZalEm4Y43IZf6-ww" style="line-height: 50px;"><img src="{{url('img/apple.png')}}" width="100%"></a>
+                            </div>
+                            <div class="col-xs-5 col-sm-5 col-md-5" style="padding-left: 0;">
+                                <a href="javascript:void(0)"><img src="{{url('img/qrcode.png')}}" width="100%"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
