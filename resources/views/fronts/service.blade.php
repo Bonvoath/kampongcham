@@ -19,5 +19,5 @@
     </div>
 @endsection
 @section('js')
-    <script src="{{asset('js/frontend/service.js')}}"></script>
+    <script src="{{asset('js/frontend/service.min.js')}}"></script>
 @endsection

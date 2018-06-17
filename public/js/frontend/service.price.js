@@ -32,6 +32,7 @@
                         '<td class="text-center">' + item.PriceFormat + '</td>'+
                         '<td class="text-center">' + item.ProcessDay + ' ថ្ងៃ</td>'+
                         '<td class="text-center">' + (item.ServiceUnit == null?'':item.ServiceUnit) + '</td>'+
+                        '<td class="text-center"><a href="http://203.223.44.122/owso/api/v1/service/download?id='+item.Id+'" target="_blank">ទាញយក</a></td>'+
                         '</tr>';
                 range++;
             }

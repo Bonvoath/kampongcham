@@ -5,7 +5,6 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 use Auth;
-use Response;
 use Intervention\Image\ImageManagerStatic as Image;
 class PostController extends Controller
 {

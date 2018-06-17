@@ -14,6 +14,7 @@
                         <th class="text-center" style="vertical-align:middle;">តំលៃ (រៀល)</th>
                         <th class="text-center" style="width:95px; vertical-align:middle;">រយះពេល (ថ្ងៃធ្វើការ)</th>
                         <th style="vertical-align:middle;">ឯកតា</th>
+                        <th style="vertical-align:middle;">ពាក្យស្នើរសុំ</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -22,5 +23,5 @@
     </div>
 @endsection
 @section('js')
-<script src="{{asset('js/frontend/service.price.js')}}"></script>
+<script src="{{asset('js/frontend/service.price.min.js')}}"></script>
 @endsection

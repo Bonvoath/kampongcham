@@ -11,12 +11,20 @@
 
     function getServiceType(callback)
     {
+        /*
         $.ajax({
             type: 'GET',
             url: BUrl('/api/get_service')
         }).done(function(res){
             var json = JSON.parse(res);
             callback(json.Data);
+        });
+        */
+        $.ajax({
+            type: 'GET',
+            url: 'http://203.223.44.122/owso/api/v1/service/type/get'
+        }).done(function (res) {
+            callback(res.Data);
         });
     }
 
