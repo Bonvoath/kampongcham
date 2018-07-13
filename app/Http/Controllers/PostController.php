@@ -6,6 +6,8 @@ use DB;
 use Session;
 use Auth;
 use Intervention\Image\ImageManagerStatic as Image;
+use GuzzleHttp\Client;
+
 class PostController extends Controller
 {
     public function __construct()
@@ -70,6 +72,26 @@ class PostController extends Controller
 
         if ($i)
         {
+            if($data['post_type'] == 'post'){
+                $client = new Client();
+                $headers = [
+                    'Content-type' => 'application/json',
+                    'Acept' => 'application/json',
+                    'Authorization' => 'Basic YTE5ZDBlZTAtZDQxYy00MDllLTllMTMtNjlhZmI5YTZkZjIx'
+                ];
+                $url = 'https://onesignal.com/api/v1/notifications';
+                $data['app_id'] = 'd502b1d5-3fbe-4e30-a907-c6ab4a846b45';
+                $data['headings'] = array('en' => $data['title']);
+                $data['contents'] = array(
+                    'en' => $data['short_description']
+                );
+                $data['included_segments'] = array('All');
+                $response = $client->post($url, [
+                    'headers' => $headers,
+                    'json' => $data
+                ]);
+                $response->getBody();
+            }
             $r->session()->flash('sms', $sms);
             return redirect('/post/create/new');
         }
